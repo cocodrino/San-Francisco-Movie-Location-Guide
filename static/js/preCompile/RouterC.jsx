@@ -27,11 +27,11 @@ var MenuC = React.createClass({
                <ul className="uk-navbar-nav uk-hidden-small">
 
                   <li className="uk-active ">
-                     <a href="" className="uk-navbar-nav-subtitle">
+                     <Link className="uk-navbar-nav-subtitle" to="geo" params={true}>
                         <i className="uk-container-center uk-icon-map-marker uk-icon-small shit icons"></i>
 
                         <div className="text-logo">Location</div>
-                     </a>
+                     </Link>
                   </li>
 
 
