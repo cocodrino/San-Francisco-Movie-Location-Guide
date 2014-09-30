@@ -9,8 +9,9 @@ var route = require('./NavBar.jsx');*/
 /*var page = require('./Page.jsx');*/
 
 var router = require('./MainContentC.jsx');
+var router2 = require('./RouterC.jsx');
 
-React.renderComponent(router, document.getElementById('content'));
+React.renderComponent(router2, document.getElementById('content'));
 
 
 /*
