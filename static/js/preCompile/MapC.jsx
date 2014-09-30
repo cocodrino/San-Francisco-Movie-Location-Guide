@@ -32,6 +32,12 @@ var MapC = React.createClass({
       return false;
    },
 
+   _toggle : function () {
+      var prev_state = this.state.show_clicked;
+      this.setState({show_clicked: !prev_state});
+      return false;
+   },
+
    getMarks: function (mvList) {
       var it = this;
       var _mk =
@@ -58,7 +64,7 @@ var MapC = React.createClass({
       var available_link = ( function (name, state_o, b) {
          //var _bool = b ? this.state[state_o] : !this.state[state_o];
 
-         if (this.state[state_o] == b) {
+         if (!this.state[state_o] == b) {
             return  <li>
                <a href="" onClick={this._toggle}>{name}</a>
             </li>
@@ -75,8 +81,8 @@ var MapC = React.createClass({
       var showMapOrDiv = (this.props.is_available && this.state.show_clicked) ?
          <Map
          initialZoom={10}
-         height={WIDTH}
-         width={HEIGHT}
+         height={HEIGHT}
+         width={WIDTH}
 
          initialCenter={new GoogleMapsAPI.LatLng(this.props.userPosition[0], this.props.userPosition[1])}
          >
@@ -96,9 +102,7 @@ var MapC = React.createClass({
                <ul className="uk-subnav">
                {available_link("Yes", "show_clicked", true)}
                {available_link("No", "show_clicked", false)}
-                  <li>
-                     <span>No  </span>
-                  </li>
+
                </ul>
             </div>
 
