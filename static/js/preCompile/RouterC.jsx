@@ -91,6 +91,7 @@ var routes =
    <Routes>
       <Route handler={MenuC}>
          <DefaultRoute name="main" handler={MainContentC} />
+         <Route name="byAge" handler={AlgoPage} path=":number"/>
       </Route>
 
 
