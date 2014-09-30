@@ -51,6 +51,8 @@ var MapC = React.createClass({
 
    render: function () {
       var marks = this.getMarks(this.props.movies);
+      var WIDTH = 600;
+      var HEIGHT = 200;
 
 
       var available_link = ( function (name, state_o, b) {
@@ -73,8 +75,8 @@ var MapC = React.createClass({
       var showMapOrDiv = (this.props.is_available && this.state.show_clicked) ?
          <Map
          initialZoom={10}
-         height={700}
-         width={700}
+         height={WIDTH}
+         width={HEIGHT}
 
          initialCenter={new GoogleMapsAPI.LatLng(this.props.userPosition[0], this.props.userPosition[1])}
          >
@@ -83,14 +85,15 @@ var MapC = React.createClass({
          :
          <div></div>;
 
+      var styleMap = {width: WIDTH, height: HEIGHT};
 
       return(
-         <div>
-            <div class="show-map-option">
-               <div class="show-map-box">
+         <div className="uk-container-center" style={styleMap}>
+            <div className="show-map-option">
+               <div className="show-map-box">
                   <h5>Show Map : </h5>
                </div>
-               <ul class="uk-subnav">
+               <ul className="uk-subnav">
                {available_link("Yes", "show_clicked", true)}
                {available_link("No", "show_clicked", false)}
                   <li>
@@ -99,8 +102,8 @@ var MapC = React.createClass({
                </ul>
             </div>
 
-            <hr class="uk-article-divider green-separator"/>
-            <div class="map">{showMapOrDiv}</div>
+            <hr className="uk-article-divider green-separator"/>
+            <div className="map">{showMapOrDiv}</div>
 
          </div>
 
