@@ -9,6 +9,12 @@ var AppendDistance = function (movieList, userCoords) {
          var distancePlace;
          try {
             distancePlace = distanceCalc(userCoords[0], userCoords[1], filmCoord[0], filmCoord[1])
+         /*   if(distancePlace>50){
+               console.log("userCoord " + userCoords + "\n");
+               console.log("filmCoord " + filmCoord);
+               debugger;
+            }*/
+
          } catch (e) {
             console.log("error,maybe I cant found a complete coordenate " + e);
             distancePlace = 100
@@ -20,10 +26,10 @@ var AppendDistance = function (movieList, userCoords) {
       });
 
       var minimalDistance = distances.sort(function (a, b) {
-         return b - a
+         return a-    b
       });
 
-      movie["distance_from_user"] = minimalDistance
+      movie["distance_from_user"] = minimalDistance[0]
       return movie;
    });
 

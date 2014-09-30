@@ -3,6 +3,7 @@ var React = require("react");
 var ReactGoogleMaps = require('react-googlemaps');
 var GoogleMapsAPI = window.google.maps;
 
+
 var Map = ReactGoogleMaps.Map;
 var Marker = ReactGoogleMaps.Marker;
 var OverlayView = ReactGoogleMaps.OverlayView;
@@ -19,7 +20,7 @@ var Format = require("./FormatNames");
  * @param {movies[]} movies movies to show
  */
 var MapC = React.createClass({
-   limitDisplaMovies: 20,
+   limitDisplaMovies: 10,
 
    softScrollTo: function (_id) {
       $('#movieList').stop().animate({
@@ -35,7 +36,7 @@ var MapC = React.createClass({
                movie.coordinates.map(function (coord) {
                   return(
                      <Marker
-                     onClick={this.softScrollTo.bind(it, Format.toHtml(movie.name))}
+                     onClick={it.softScrollTo.bind(it, Format.toHtml(movie.name))}
                      position={new GoogleMapsAPI.LatLng(coord[0], coord[1])}
                      />)
                })
@@ -50,6 +51,9 @@ var MapC = React.createClass({
       var showMapOrDiv = this.props.show ?
          <Map
          initialZoom={10}
+            height={700}
+            width={700}
+
          initialCenter={new GoogleMapsAPI.LatLng(this.props.userPosition[0], this.props.userPosition[1])}
          >
          {marks}

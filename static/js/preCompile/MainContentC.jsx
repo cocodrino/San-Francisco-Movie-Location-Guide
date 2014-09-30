@@ -55,7 +55,7 @@ var MainContentC = React.createClass({
          <div>
             <MapC
             show={this.state.nearSF}
-            movies={this.movies}
+            movies={this.state.movies}
             userPosition={this.state.userPosition}/>
 
             <MovieListC data={this.state.movies} sort={this.state.sortBy}/>

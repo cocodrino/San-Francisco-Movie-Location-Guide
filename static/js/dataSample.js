@@ -1,4 +1,4 @@
-var wholeData = {"180": {
+var DATA_SPECIFIC = {"180": {
     "sfdata": [
         {
             "actor1": "Siddarth",
