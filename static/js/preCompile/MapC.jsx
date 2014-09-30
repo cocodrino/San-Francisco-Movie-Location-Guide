@@ -91,20 +91,27 @@ var MapC = React.createClass({
          :
          <div></div>;
 
+      var showMapOptions = this.props.is_available ?
+         <div className="show-map-option">
+            <div className="show-map-box">
+               <h5>Show Map : </h5>
+            </div>
+            <ul className="uk-subnav">
+               {available_link("Yes", "show_clicked", true)}
+               {available_link("No", "show_clicked", false)}
+
+            </ul>
+         </div>
+
+         :
+
+         <div></div>;
+
       var styleMap = {width: WIDTH, height: HEIGHT};
 
       return(
          <div className="uk-container-center" style={styleMap}>
-            <div className="show-map-option">
-               <div className="show-map-box">
-                  <h5>Show Map : </h5>
-               </div>
-               <ul className="uk-subnav">
-               {available_link("Yes", "show_clicked", true)}
-               {available_link("No", "show_clicked", false)}
-
-               </ul>
-            </div>
+            {showMapOptions}
 
             <hr className="uk-article-divider green-separator"/>
             <div className="map">{showMapOrDiv}</div>

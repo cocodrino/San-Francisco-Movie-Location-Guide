@@ -91,7 +91,12 @@ var routes =
    <Routes>
       <Route handler={MenuC}>
          <DefaultRoute name="main" handler={MainContentC} />
-         <Route name="byAge" handler={AlgoPage} path=":number"/>
+         <Route name="geo" handler={MainContentC} path=":geoAvailable"/>
+         <Route
+         name="detail"
+         path="/detail/:movie"
+         handler={MainMovieDetailC}
+         />
       </Route>
 
 
