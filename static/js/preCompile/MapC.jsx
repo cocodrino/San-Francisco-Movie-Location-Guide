@@ -50,7 +50,7 @@ var MapC = React.createClass({
       var showMapOrDiv = this.props.show ?
          <Map
          initialZoom={10}
-         initialCenter={new GoogleMapsAPI.LatLng(userPosition[0], userPosition[1])}
+         initialCenter={new GoogleMapsAPI.LatLng(this.props.userPosition[0], this.props.userPosition[1])}
          >
          {marks}
          </Map>

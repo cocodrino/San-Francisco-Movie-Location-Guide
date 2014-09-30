@@ -13,22 +13,24 @@ var MovieListC = require('./MovieListC.jsx');
 var MainContentC = React.createClass({
    //this launch a warning for geo features unavailables
    mustShowLocationMessage: function () {
-      setTimeout(function () {
+      setTimeout((function () {
          if (!this.state.nearSF) {
             //message.push("sorry seems than you're not near to San Francisco")
          }
-      }, 20 * 1000)
+      }).bind(this), 20 * 1000)
    },
 
    runGeoLocalization: function () {
       //refactor: use object instead of arrays for result geoLocation
+      var that = this;
+      var _movies = this.state.movies;
       getLocation(function (resultArray) {
          if (resultArray[0] == false) {
-            this.setState({nearSF: false})
+            that.setState({nearSF: false})
 
          } else {
-            this.setState({
-               movies: appendDistance(this.state.movies, resultArray[1]),
+            that.setState({
+               movies: appendDistance(_movies  , resultArray[1]),
                nearSF: true,
                userPosition: resultArray[1]
 
@@ -37,9 +39,13 @@ var MainContentC = React.createClass({
       })
    },
 
-   getInitialState: function () {
+   componentWillMount : function () {
       this.runGeoLocalization();
       this.mustShowLocationMessage();
+   },
+
+   getInitialState: function () {
+
       return {movies: data, nearSF: null,userPosition : null,sortBy:"score"}
    },
 

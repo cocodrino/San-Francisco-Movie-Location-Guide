@@ -4,9 +4,19 @@
 var distanceCalc = require("./DistanceCalculator");
 
 var AppendDistance = function (movieList, userCoords) {
-   return movieList.map(function (movie) {
+   var _movieList = movieList.map(function (movie) {
       var distances = movie.coordinates.map(function (filmCoord) {
-         distanceCalc(userCoords[0], userCoords[1], filmCoord[0], filmCoord[1])
+         var distancePlace;
+         try {
+            distancePlace = distanceCalc(userCoords[0], userCoords[1], filmCoord[0], filmCoord[1])
+         } catch (e) {
+            console.log("error,maybe I cant found a complete coordenate " + e);
+            distancePlace = 100
+         }
+
+
+         return distancePlace
+
       });
 
       var minimalDistance = distances.sort(function (a, b) {
@@ -14,8 +24,10 @@ var AppendDistance = function (movieList, userCoords) {
       });
 
       movie["distance_from_user"] = minimalDistance
+      return movie;
+   });
 
-   })
+   return _movieList;
 };
 
 module.exports = AppendDistance;

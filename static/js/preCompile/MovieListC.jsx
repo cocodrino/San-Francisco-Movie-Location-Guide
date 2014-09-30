@@ -19,7 +19,7 @@ var MovieMainC = React.createClass({
 
       return(
          <div id={Format.toHtml(this.props.name)}>
-            <div>{this.props.poster}</div>
+            <img src={this.props.Poster}/>
             <div>{this.props.name}</div>
             <div>{rating_distance}</div>
          </div>
@@ -37,12 +37,13 @@ var MovieMainC = React.createClass({
  */
 var MovieListC = React.createClass({
    render: function () {
-      var sortedMovies = _.sortBy(this.props.data, this.props.sort);
+      var sortedMovies = _.sortBy(this.props.data, this.props.sort).reverse();
       var movies = sortedMovies.map(function (data) {
-         return <MovieMainC poster={data.poster}
+         return <MovieMainC poster={data.Poster}
          name={data.name}
          score={data.score}
          distance = {data.distance_from_user}
+         key={Format.toHtml(data.name)}
          />
       });
 
