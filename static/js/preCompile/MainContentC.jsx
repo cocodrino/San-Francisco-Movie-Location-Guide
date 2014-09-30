@@ -46,10 +46,11 @@ var MainContentC = React.createClass({
 
    getInitialState: function () {
 
-      return {movies: data, nearSF: null,userPosition : null,sortBy:"score"}
+      return {movies: data, nearSF: null,userPosition : null}
    },
 
    render: function () {
+      var sortingBy = this.props.geoAvailable ? "distance_from_user" : "score";
 
       return(
          <div>
@@ -58,7 +59,7 @@ var MainContentC = React.createClass({
             movies={this.state.movies}
             userPosition={this.state.userPosition}/>
 
-            <MovieListC data={this.state.movies} sort={this.state.sortBy}/>
+            <MovieListC data={this.state.movies} sort={sortingBy}/>
 
          </div>
 
@@ -66,4 +67,4 @@ var MainContentC = React.createClass({
    }
 });
 
-module.exports = MainContentC();
+module.exports = MainContentC;
