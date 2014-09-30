@@ -2,7 +2,7 @@
 
 var FormatNames = {
    toHtml: function (string) {
-      return string.toLowerCase().replace(/\s+/g, "_")
+      return string.toLowerCase().replace(/[^\w\s]/gi, '').replace(/\s+/g, "_")
    },
 
    toHumanReadable: function (string) {

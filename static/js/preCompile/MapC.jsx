@@ -10,7 +10,6 @@ var OverlayView = ReactGoogleMaps.OverlayView;
 var Format = require("./FormatNames");
 
 
-
 /**
  * Map Component , take movies and show boolean and load the coordinates
  * in a map
@@ -20,12 +19,13 @@ var Format = require("./FormatNames");
  * @param {movies[]} movies movies to show
  */
 var MapC = React.createClass({
-   limitDisplaMovies: 10,
+   limitDisplaMovies: 2,
 
    softScrollTo: function (_id) {
-      $('#movieList').stop().animate({
-         scrollTop: $('#' + _id).offset().top
-      }, 400);
+      $('html, body').animate({
+         scrollTop: $("#" + _id).offset().top
+      }, 500);
+      return false;
    },
 
    getMarks: function (mvList) {
@@ -33,13 +33,13 @@ var MapC = React.createClass({
       var _mk =
          _.take(mvList, this.limitDisplaMovies)
             .map(function (movie) {
-               movie.coordinates.map(function (coord) {
+               return (movie.coordinates.map(function (coord) {
                   return(
                      <Marker
                      onClick={it.softScrollTo.bind(it, Format.toHtml(movie.name))}
                      position={new GoogleMapsAPI.LatLng(coord[0], coord[1])}
                      />)
-               })
+               }))
             });
 
       return _.flatten(_mk)
@@ -51,8 +51,8 @@ var MapC = React.createClass({
       var showMapOrDiv = this.props.show ?
          <Map
          initialZoom={10}
-            height={700}
-            width={700}
+         height={700}
+         width={700}
 
          initialCenter={new GoogleMapsAPI.LatLng(this.props.userPosition[0], this.props.userPosition[1])}
          >
