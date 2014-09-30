@@ -6,10 +6,16 @@ var DefaultRoute = Router.DefaultRoute;
 var Link = Router.Link;
 var MainContentC = require("./MainContentC.jsx");
 var MainMovieDetailC = require("./MainMovieDetailC.jsx");
+var pubsub = require('pubsub-js');
 
+//PUBSUB IS TEMPORAL, MUST USE A MOST SOLID SOLUTION (FLUX or BACONJS)
+pubsub.subscribe("CONTENT", function (msg, data) {
+   console.log("RECIBIDO " + msg + " ," + data);
+});
 
 var MenuC = React.createClass({
    render: function () {
+      var show_By_place = {sortByNear: true};
       return(
          <div>
             <nav className="uk-navbar navbar_fix uk-navbar-attached shadow">
@@ -27,11 +33,13 @@ var MenuC = React.createClass({
                <ul className="uk-navbar-nav uk-hidden-small">
 
                   <li className="uk-active ">
-                     <Link className="uk-navbar-nav-subtitle" to="geo" params={true}>
+                     <a className="uk-navbar-nav-subtitle"
+                     onClick={pubsub.publish.bind(null,"CONTENT","distance_from_user")}>
+
                         <i className="uk-container-center uk-icon-map-marker uk-icon-small shit icons"></i>
 
                         <div className="text-logo">Location</div>
-                     </Link>
+                     </a>
                   </li>
 
 
@@ -50,7 +58,7 @@ var MenuC = React.createClass({
                   </li>
 
                   <li>
-                     <a href="" className="uk-navbar-nav-subtitle">
+                     <a onClick={pubsub.publish.bind(null,"CONTENT","score")} className="uk-navbar-nav-subtitle">
                         <i className="uk-container-center uk-icon-heart-o uk-icon-small shit icons"></i>
 
                         <div className="text-logo">Rating</div>
@@ -86,17 +94,24 @@ var AlgoPage = React.createClass({
          )
    }
 });
+/*
+<Route
+name="detail"
+path="/detail/:movie"
+handler={MainMovieDetailC}
+/>
+*/
 var MapC = require("./MapC.jsx");
 var routes =
    <Routes>
       <Route handler={MenuC}>
-         <DefaultRoute name="main" handler={MainContentC} />
-         <Route name="geo" handler={MainContentC} path=":geoAvailable"/>
+         <DefaultRoute name="main" handler={MainContentC}  />
          <Route
          name="detail"
          path="/detail/:movie"
          handler={MainMovieDetailC}
          />
+
       </Route>
 
 

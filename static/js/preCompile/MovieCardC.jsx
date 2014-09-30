@@ -1,4 +1,4 @@
-var React = require('React');
+var React = require('react');
 
 //received props :   movie
 var PosterC = React.createClass({
@@ -22,15 +22,15 @@ var PosterC = React.createClass({
          .map(function (v) {
 
             return <div>
-               <h3>v[0]</h3>
-               <h5>v[1]</h5>
+               <h3>{v[0]}</h3>
+               <h5>{v[1]}</h5>
             </div>
          });
 
       return(
          <div>
             <img src={posterURL} />
-            <detailElement/>
+            {detailElement}
 
          </div>
          )
@@ -40,7 +40,7 @@ var PosterC = React.createClass({
 //received props :   also movie
 var ValorationC = React.createClass({
    render: function () {
-      var originData = DATA_SPECIFIC[this.props.movie]["tomatodata"]["rating"];
+      var originData = DATA_SPECIFIC[this.props.movie]["tomatodata"]["ratings"];
 
       var ratingElement = (
          <div>
@@ -79,3 +79,6 @@ var MovieCardC = React.createClass({
          )
    }
 });
+
+
+module.exports = MovieCardC;

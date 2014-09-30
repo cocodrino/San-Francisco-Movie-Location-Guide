@@ -1,6 +1,7 @@
 var React = require("react");
 var Format = require("./FormatNames");
-
+var Router = require('react-router');
+var Link = Router.Link;
 /**
  * Movie Bar Component
  * Display poster,name,rating and (optional) distance for movie main page
@@ -19,9 +20,11 @@ var MovieMainC = React.createClass({
 
       return(
          <div id={Format.toHtml(this.props.name)}>
+            <Link to="detail" params={{movie: this.props.name}}>
             <img src={this.props.Poster}/>
             <div>{this.props.name}</div>
             <div>{rating_distance}</div>
+               </Link>
          </div>
          )
    }

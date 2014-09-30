@@ -3,11 +3,11 @@ var React = require("react");
 var getLocation = require("./Geo");
 var appendDistance = require('./AppendDistance');
 var MapC = require('./MapC.jsx');
-
+var Router = require('react-router');
 
 console.log(data.length);
 var MovieListC = require('./MovieListC.jsx');
-
+var pubsub = require('pubsub-js');
 
 
 var MainContentC = React.createClass({
@@ -44,13 +44,19 @@ var MainContentC = React.createClass({
       this.mustShowLocationMessage();
    },
 
+   componentDidMount : function () {
+      pubsub.subscribe("CONTENT", (function (msg, data) {
+         this.setState({sort : data})
+      }).bind (this));
+   },
+
    getInitialState: function () {
 
-      return {movies: data, nearSF: null,userPosition : null}
+      return {movies: data, nearSF: null,userPosition : null,sort:"score"}
    },
 
    render: function () {
-      var sortingBy = this.props.geoAvailable ? "distance_from_user" : "score";
+
 
       return(
          <div>
@@ -59,7 +65,7 @@ var MainContentC = React.createClass({
             movies={this.state.movies}
             userPosition={this.state.userPosition}/>
 
-            <MovieListC data={this.state.movies} sort={sortingBy}/>
+            <MovieListC data={this.state.movies} sort={this.state.sort}/>
 
          </div>
 
