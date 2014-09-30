@@ -21,8 +21,8 @@ var Format = require("./FormatNames");
 var MapC = React.createClass({
    limitDisplaMovies: 2,
 
-   getInitialState : function () {
-      return {show_clicked : false}
+   getInitialState: function () {
+      return {show_clicked: false}
    },
 
    softScrollTo: function (_id) {
@@ -52,6 +52,24 @@ var MapC = React.createClass({
    render: function () {
       var marks = this.getMarks(this.props.movies);
 
+
+      var available_link = ( function (name, state_o, b) {
+         //var _bool = b ? this.state[state_o] : !this.state[state_o];
+
+         if (this.state[state_o] == b) {
+            return  <li>
+               <a href="" onClick={this._toggle}>{name}</a>
+            </li>
+
+         } else {
+            return <li>
+               <span>{name}</span>
+            </li>
+         }
+
+
+      }).bind(this);
+
       var showMapOrDiv = (this.props.is_available && this.state.show_clicked) ?
          <Map
          initialZoom={10}
@@ -66,21 +84,6 @@ var MapC = React.createClass({
          <div></div>;
 
 
-      var available_link =( function (name, state_for_true) {
-        var tag
-        if(this.state[state_for_true]){
-         tag = (<li><a href="" onClick={this.toggle_f}>{name}</a></li>)
-
-        }else{
-          tag = (<li><span>{name}</span><li>)
-        }
-
-        return tag
-
-      }).bind(this);
-
-
-
       return(
          <div>
             <div class="show-map-option">
@@ -88,9 +91,8 @@ var MapC = React.createClass({
                   <h5>Show Map : </h5>
                </div>
                <ul class="uk-subnav">
-                  <li>
-                     <a href=""> Yes </a>
-                  </li>
+               {available_link("Yes", "show_clicked", true)}
+               {available_link("No", "show_clicked", false)}
                   <li>
                      <span>No  </span>
                   </li>
