@@ -21,6 +21,10 @@ var Format = require("./FormatNames");
 var MapC = React.createClass({
    limitDisplaMovies: 2,
 
+   getInitialState : function () {
+      return {show_clicked : false}
+   },
+
    softScrollTo: function (_id) {
       $('html, body').animate({
          scrollTop: $("#" + _id).offset().top
@@ -48,7 +52,7 @@ var MapC = React.createClass({
    render: function () {
       var marks = this.getMarks(this.props.movies);
 
-      var showMapOrDiv = this.props.show ?
+      var showMapOrDiv = (this.props.is_available && this.state.show_clicked) ?
          <Map
          initialZoom={10}
          height={700}
@@ -60,8 +64,45 @@ var MapC = React.createClass({
          </Map>
          :
          <div></div>;
+
+
+      var available_link =( function (name, state_for_true) {
+        var tag
+        if(this.state[state_for_true]){
+         tag = (<li><a href="" onClick={this.toggle_f}>{name}</a></li>)
+
+        }else{
+          tag = (<li><span>{name}</span><li>)
+        }
+
+        return tag
+
+      }).bind(this);
+
+
+
       return(
-         <div>{showMapOrDiv}</div>
+         <div>
+            <div class="show-map-option">
+               <div class="show-map-box">
+                  <h5>Show Map : </h5>
+               </div>
+               <ul class="uk-subnav">
+                  <li>
+                     <a href=""> Yes </a>
+                  </li>
+                  <li>
+                     <span>No  </span>
+                  </li>
+               </ul>
+            </div>
+
+            <hr class="uk-article-divider green-separator"/>
+            <div class="map">{showMapOrDiv}</div>
+
+         </div>
+
+
 
          )
    }

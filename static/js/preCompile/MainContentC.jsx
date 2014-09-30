@@ -55,7 +55,7 @@ var MainContentC = React.createClass({
       return(
          <div>
             <MapC
-            show={this.state.nearSF}
+            is_available={this.state.nearSF}
             movies={this.state.movies}
             userPosition={this.state.userPosition}/>
 
