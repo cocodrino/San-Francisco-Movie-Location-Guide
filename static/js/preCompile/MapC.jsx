@@ -19,7 +19,7 @@ var Format = require("./FormatNames");
  * @param {movies[]} movies movies to show
  */
 var MapC = React.createClass({
-   limitDisplaMovies: 2,
+   limitDisplaMovies: 40,
 
    getInitialState: function () {
       return {show_clicked: false}
@@ -107,10 +107,10 @@ var MapC = React.createClass({
 
          <div></div>;
 
-      var styleMap = {width: WIDTH, height: HEIGHT};
+      var my_style = {paddingBottom:"20px", width: WIDTH};
 
       return(
-         <div className="uk-container-center" style={styleMap}>
+         <div className="uk-container-center" style={my_style}>
             {showMapOptions}
 
             <hr className="uk-article-divider green-separator"/>

@@ -59,7 +59,7 @@ var MainContentC = React.createClass({
 
 
       return(
-         <div>
+         <div className="movieContainer uk-width-8-10 uk-container-center card-shadow">
             <MapC
             is_available={this.state.nearSF}
             movies={this.state.movies}

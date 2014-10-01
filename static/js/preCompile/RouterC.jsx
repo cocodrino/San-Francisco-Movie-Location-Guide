@@ -16,9 +16,15 @@ pubsub.subscribe("CONTENT", function (msg, data) {
 var MenuC = React.createClass({
    render: function () {
       var show_By_place = {sortByNear: true};
+      var attachIt = {
+         "position": "fixed" ,
+         "width" : "100%",
+         zIndex: 10,
+         top:0
+      };
       return(
          <div>
-            <nav className="uk-navbar navbar_fix uk-navbar-attached shadow">
+            <nav className="uk-navbar navbar_fix uk-navbar-attached shadow" style={attachIt}>
                <div className="uk-hidden-medium uk-hidden-large mini-menu">
                   <a href="" data-uk-offcanvas>
                      <i className="uk-icon-bars uk-icon-medium"></i>
@@ -32,11 +38,11 @@ var MenuC = React.createClass({
 
                <ul className="uk-navbar-nav uk-hidden-small">
 
-                  <li className="uk-active ">
+                  <li className="uk-active2 ">
                      <a className="uk-navbar-nav-subtitle"
                      onClick={pubsub.publish.bind(null,"CONTENT","distance_from_user")}>
 
-                        <i className="uk-container-center uk-icon-map-marker uk-icon-small shit icons"></i>
+                        <i className="uk-container-center uk-icon-map-marker uk-icon-small correction icons"></i>
 
                         <div className="text-logo">Location</div>
                      </a>
@@ -47,7 +53,7 @@ var MenuC = React.createClass({
                      <span>
                         <span className="uk-navbar-nav-subtitle">
                            <i className="uk-container-center uk-icon-group
-                   uk-icon-small shit icons" data-uk-tooltip title="Coming soon..."></i>
+                   uk-icon-small correction icons" data-uk-tooltip title="Coming soon..."></i>
 
 
                            <div className="text-logo">Actor</div>
@@ -59,7 +65,7 @@ var MenuC = React.createClass({
 
                   <li>
                      <a onClick={pubsub.publish.bind(null,"CONTENT","score")} className="uk-navbar-nav-subtitle">
-                        <i className="uk-container-center uk-icon-heart-o uk-icon-small shit icons"></i>
+                        <i className="uk-container-center uk-icon-heart-o uk-icon-small correction icons"></i>
 
                         <div className="text-logo">Rating</div>
                      </a>

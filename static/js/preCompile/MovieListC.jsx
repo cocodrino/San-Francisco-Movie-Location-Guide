@@ -19,13 +19,34 @@ var MovieMainC = React.createClass({
          <div>{this.props.score}/{this.props.distance}</div>;
 
       return(
-         <div id={Format.toHtml(this.props.name)}>
+         <li id={Format.toHtml(this.props.name)} className="movieBar">
             <Link to="detail" params={{movie: this.props.name}}>
-            <img src={this.props.Poster}/>
-            <div>{this.props.name}</div>
-            <div>{rating_distance}</div>
-               </Link>
-         </div>
+               <div className="uk-grid uk-panel-box data-uk-grid-match">
+                  <div className="uk-width-large-1-10 uk-width-medium-2-10 uk-hidden-small poster">
+                     <img src={this.props.poster}/>
+                  </div>
+
+                  <div className="
+                     uk-width-medium-5-10
+                     uk-width-large-7-10
+                     uk-vertical-align-middle
+                     title_bar_main">
+                     <h2>{this.props.name}</h2>
+                  </div>
+
+                  <div className="
+                     uk-width-large-2-10
+                     distance-box
+                     uk-width-medium-3-10 "
+                  >
+                     <p>Score</p>
+                     <h4>{rating_distance}</h4>
+                  </div>
+
+
+               </div>
+            </Link>
+         </li>
          )
    }
 });
@@ -50,9 +71,13 @@ var MovieListC = React.createClass({
          />
       });
 
+
+
       return(
-         <div id="movieList">
+         <div className="uk-width-9-10 uk-container-center"    id="movieList">
+            <ul className="uk-list uk-list-line">
       {movies}
+            </ul>
          </div>)
    }
 });

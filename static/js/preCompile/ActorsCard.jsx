@@ -11,7 +11,7 @@ var ActorCard = React.createClass({
         + Fm.toHtml( this.props.name )+ "?maxwidth=120&maxheight=120&mode=fillcropmid";
 
     return(
-         <div>
+         <div className="uk-width-1-3">
             <h3>{this.props.name}</h3>
             <img src={url_img}/>
 
@@ -34,7 +34,30 @@ var ActorsCard = React.createClass({
      });
 
     return(
-         <div>{actorsElem}</div>
+
+       <div className="movieContainer uk-width-8-10 uk-container-center uk-panel-box subCat">
+          <div className="Sub-panel">
+             <div className="uk-width-9-10 uk-container-center uk-article">
+                <div className="uk-grid">
+                   <div className="uk-width-3-3">
+                      <h2 className="uk-h3 " data-uk-tooltip title="Only show actors who filmed in San Francisco">CASTING * : </h2>
+
+                      <hr class="uk-article-divider"/>
+
+                   </div>
+                   {actorsElem}
+
+                </div>
+             </div>
+
+
+          </div>
+
+          <hr className="uk-article-divider"/>
+
+       </div>
+
+
     )
   }
 });

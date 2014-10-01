@@ -5,7 +5,10 @@ var React = require('react');
 var DescriptionC = React.createClass({
    render: function () {
       var description = (this.props.path) ?
-         <div>{ jsonPath(this.props.path, '$../common/topic/description..value')}</div>
+         <p>
+            <dt>Details</dt>
+            <dd>{ jsonPath(this.props.path, '$../common/topic/description..value')}</dd>
+         </p>
          :
          <div></div>;
 
@@ -19,10 +22,18 @@ var DescriptionC = React.createClass({
 var ImagesC = React.createClass({
    render: function () {
       var images_ID = jsonPath(this.props.path, '$../common/topic/image..values..id');
-      var images = <div>I can't find any image sorry</div>;
+      var images = <div className="uk-text-danger">
+         <h5>I can't find any image sorry</h5>
+      </div>;
       if (images_ID) {
          images = images_ID.map(function (img_id) {
-            return <img src={"https://usercontent.googleapis.com/freebase/v1/image" + img_id + "?maxwidth=300&maxheight=300&mode=fillcropmid" }/>
+            return(
+               <p>
+                  <dt>Photo:</dt>
+                  <dd>
+                     <img src={"https://usercontent.googleapis.com/freebase/v1/image" + img_id + "?maxwidth=300&maxheight=300&mode=fillcropmid" }/>
+                  </dd>
+               </p>)
          });
       }
 
@@ -38,12 +49,13 @@ var ImagesC = React.createClass({
 var WebsiteC = React.createClass({
    render: function () {
       var website = jsonPath(this.props.path, '$../common/topic/official_website..text');
-      var render = website ? <a href={website[0]}>Official Page</a> : <div>Not website found....</div>;
+      var render = website ? <a href={website[0]}>Official Page</a> : <div className="uk-text-danger">Not website found....</div>;
 
       return(
-         <div>
-       {render}
-         </div>
+         <p>
+            <dt>Official WebSite</dt>
+            <dd>{render}</dd>
+         </p>
 
          )
    }
@@ -62,6 +74,7 @@ var UbicationC = React.createClass({
 });
 
 
+//mental note...don't use again the tomato rotten api...sucks!
 var PlaceCard = React.createClass({
 
 
@@ -97,21 +110,42 @@ var PlaceCard = React.createClass({
    render: function () {
       var dataFreebase =
             this.state.properties ?
-               <div>
+               <dl className="uk-description-list-horizontal">
                   <DescriptionC path={this.state.properties}/>
                   <ImagesC path={this.state.properties}/>
                   <WebsiteC path={this.state.properties}/>
                   <UbicationC path={this.state.properties}/>
-               </div>
+               </dl>
                :
-               <div></div>
+               <dl></dl>
          ;
 
       return(
-         <div>
-           {dataFreebase}
+
+         <div className="movieContainer uk-width-8-10 uk-container-center subCat uk-panel-box ">
+            <div className="Sub-panel">
+               <div className="uk-width-9-10 uk-container-center uk-article">
+                  <div className="uk-grid">
+                     <div className="uk-width-3-3">
+                        <h2 className="uk-h3 ">{this.props.location}</h2>
+                        <p></p>
+                        <hr class="uk-article-divider"/>
+                     </div>
+                        {dataFreebase}
+
+                  </div>
+               </div>
+
+
+            </div>
+
+            <hr className="uk-article-divider"/>
 
          </div>
+
+
+
+
          )
    }
 });
@@ -120,12 +154,12 @@ var PlacesCard = React.createClass({
    render: function () {
       var originData = DATA_SPECIFIC[this.props.movie]["sfdata"];
       var places = originData.map(function (p) {
-         return p["location"]
+         return [p["location"], p["coordinates"]];
       });
 
 
-      var _places = places.map(function (name) {
-         return <PlaceCard location={name}/>
+      var _places = places.map(function (ar) {
+         return <PlaceCard location={ar[0]} coordinates={ar[1]}/>
       });
 
       return(
