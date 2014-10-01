@@ -52,6 +52,10 @@ var MovieMainC = React.createClass({
 });
 
 
+
+
+
+
 /**
  * Movie List Component
  * Display Movies and sort them based in the sort parameter

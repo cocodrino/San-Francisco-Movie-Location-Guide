@@ -18,7 +18,10 @@ and of course:
 for this amazing opportunity..many thanks!
 
 
-the project needs some fixes and improves, I will do it and add smooth animations and better navigation
-the time was to short
+
+
+the project needs some fixes and improvements and better documentation ...
+thanks!
+
 
 
