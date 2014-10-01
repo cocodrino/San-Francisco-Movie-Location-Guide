@@ -15,7 +15,7 @@ and of course:
 - Programmr http://www.programmr.com/
 - Hired https://hired.com/
 
-for this amazing opportunity..many thanks!
+for this amazing opportunity..many thanks!!!...
 
 
 
@@ -24,5 +24,4 @@ the project needs some fixes and improvements and better documentation ...
 the entry point is located inside the folder static/main.html...
 
 thanks!
-
 
