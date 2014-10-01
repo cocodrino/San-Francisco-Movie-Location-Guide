@@ -21,7 +21,8 @@ for this amazing opportunity..many thanks!
 
 
 the project needs some fixes and improvements and better documentation ...
-thanks!
+the entry point is located inside the folder static/main.html...
 
+thanks!
 
 
