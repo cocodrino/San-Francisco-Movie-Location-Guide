@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SF movie location</title>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="static/public/uikit-2.2.0/js/uikit.js"></script>
+    <script src="static/js/MainPageData.js"></script>
+    <script src="static/js/hugedata.js"></script>
+    <script src="static/js/jsonpath-0.8.0.js"></script>
+    <script src="static/js/lodash.min.js"></script>
+    <link rel="stylesheet" href="static/public/uikit-2.2.0/css/uikit.almost-flat.css"/>
+    <style>
+        html {
+            background-color: #e2e2e2 !important;
+        }
+
+        .movieContainer {
+            background-color: white;
+            margin-top: 120px;
+            padding: 10px;
+
+        }
+
+        .gradient {
+            background: #fe593d; /* Old browsers */
+            /* background: -moz-linear-gradient(top, #fe593d 0%, #ff3062 100%); *//* FF3.6+ */
+            background: -moz-linear-gradient(top, #ff3062 100%, #fe593d 0%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fe593d), color-stop(100%, #ff3062)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, #ff3062 100%, #fe593d 0%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, #fe593d 0%, #ff3062 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, #fe593d 0%, #ff3062 100%); /* IE10+ */
+            background: linear-gradient(to bottom, #fe593d 0%, #ff3062 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fe593d', endColorstr='#ff3062', GradientType=0); /* IE6-9 */
+        }
+
+        .correction {
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            width: 100% !important;
+            overflow: hidden;
+            text-overflow: clip;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .uk-navbar {
+            padding-top: 2px;
+        }
+
+        .logo {
+            width: 149px;
+            height: 50px;
+        }
+
+        .navbar_fix {
+            padding-top: 10px;
+            padding-bottom: 20px;
+            max-height: 50px;
+            overflow: hidden;
+        }
+
+        .navbar-brand-fix {
+            padding-left: 0;
+        }
+
+        .icons {
+            color: #df2e3a;
+
+        }
+
+        .shadow {
+            -webkit-box-shadow: 0px 5px 10px 0px rgba(50, 50, 50, 0.39);
+            -moz-box-shadow: 0px 5px 10px 0px rgba(50, 50, 50, 0.39);
+            box-shadow: 0px 5px 10px 0px rgba(50, 50, 50, 0.39);
+        }
+
+        .show-map-box {
+            display: inline-block;
+            width: 100px;
+        }
+
+        .uk-subnav {
+            display: inline;
+        }
+
+
+
+        .distance-box * {
+            color: #bcbcbc;
+
+            height: 30px;
+        }
+
+
+
+        .heigh_bar {
+
+        }
+
+        .title_bar_main {
+            padding-top: 0;
+        }
+
+        /*    .title_bar_main {
+           padding-top: 10px;;
+        }*/
+
+        .mini-menu{
+
+        }
+
+        .fixNew {
+            margin-left: 0 !important;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+
+        .card-shadow{
+            -webkit-box-shadow: 0px 8px 8px 0px rgba(50, 50, 50, 0.23);
+            -moz-box-shadow:    0px 8px 8px 0px rgba(50, 50, 50, 0.23);
+            box-shadow:         0px 8px 8px 0px rgba(50, 50, 50, 0.23);
+        }
+
+        .green-separator {
+            border-color:  rgba(1, 159, 133, 1);
+            /*border-color: #fe593d;*/
+        }
+
+        .distance-box {
+            position: relative;
+            height: 100%;
+            text-align: center;
+            color:white  ;
+            min-height: 105px;
+            background-color:  rgba(235, 240, 239, 1);
+
+
+        }
+
+
+        .distance-box p{
+            padding-top: 3px;
+            /*text-decoration: underline;*/
+            font-size: 13px;
+            min-height: 25px;
+            margin-bottom: 0;
+            padding-bottom: 0;
+            color: #545454;
+        }
+
+        .distance-box h4{
+            padding-top: 0;
+            margin-top: 0;
+            /*color : rgb(1, 132, 108);*/
+            /* color : #fe593d;*/
+            color: #fe593d;
+
+        }
+
+        .movieBar .uk-grid{
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            padding-top: 0;
+            padding-bottom: 0;
+
+        }
+
+        .image-poster {
+            padding :5px;
+
+            max-height: 70px;
+            width: 100px;
+        }
+
+        .poster{
+            padding-left: 12px !important; ;
+
+            padding-right: 12px !important;
+            overflow: hidden;
+        }
+
+        .card-shadow{
+            -webkit-box-shadow: 0px 8px 8px 0px rgba(50, 50, 50, 0.23);
+            -moz-box-shadow:    0px 8px 8px 0px rgba(50, 50, 50, 0.23);
+            box-shadow:         0px 8px 8px 0px rgba(50, 50, 50, 0.23);
+        }
+
+        .Bar_Movie_Card {
+            min-width: 100%;
+
+            min-height: 60px;
+            /*background-color: #02b295;*/
+            background-color: rgba(1, 159, 133, 1);
+            /* background-color: #e00031;*/
+        }
+
+        .Bar_Movie_Card * {
+            padding-top: 3px;
+            color: #ffffff;
+        }
+
+        .valoration_bar {
+            background-color: #fce4ec;
+            width: 100%;
+        }
+
+        .box_ratings {
+            background-color: green;
+
+        }
+
+        .poster-with-data {
+            padding-top: 15px;
+            padding-bottom: 0;
+            /*background-color: rgba(72, 72, 84, 1);*/
+
+            /*background-color: #4CAB93 ;*/
+        }
+
+        .centered-text {
+            text-align: center;
+        }
+
+        .shadow_postr {
+            -webkit-box-shadow: -2px 1px 11px 0px rgba(50, 50, 50, 0.69);
+            -moz-box-shadow: -2px 1px 11px 0px rgba(50, 50, 50, 0.69);
+            box-shadow: -2px 1px 11px 0px rgba(50, 50, 50, 0.69);
+        }
+
+        .compact-movie-det {
+            margin-top: 15px;
+            padding-top: 10px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.02);
+        }
+
+        .actor_card {
+            background-color: #b5bbbc;
+        }
+
+        .fontTitles {
+            font-family: "ProximaNovaLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+        }
+
+        .title {
+
+            font-size: 28px;
+            padding-top: 11px;
+
+        }
+
+        .point-rating {
+            color: #fe593d;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            font-size: 30px;
+        }
+
+
+
+        .image-box {
+            background-color: rgba(0, 0, 0, 0.085);
+        }
+
+        .description-col {
+            padding-top: 15px;
+        }
+
+        .Sub-panel {
+            padding-top: 15px;
+
+        }
+
+        .Sub-panel h2 {
+            color: rgba(1, 159, 133, 2) !important;
+        }
+
+        .subCat{
+            margin-top: 25px;
+        }
+
+
+
+
+    </style>
+
+</head>
+<body>
+<div id="content"></div>
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script src="static/js/main.js" async></script>
+</body>
+</html>
