@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fa636d96-b057-4289-9d58-b2310e495e28" name="Default" comment="added readme">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/preCompile/Geo.js" afterPath="$PROJECT_DIR$/static/js/preCompile/Geo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/preCompile/MainMovieDetailC.jsx" afterPath="$PROJECT_DIR$/static/js/preCompile/MainMovieDetailC.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/preCompile/MapC.jsx" afterPath="$PROJECT_DIR$/static/js/preCompile/MapC.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/preCompile/MovieCardC.jsx" afterPath="$PROJECT_DIR$/static/js/preCompile/MovieCardC.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/preCompile/MovieListC.jsx" afterPath="$PROJECT_DIR$/static/js/preCompile/MovieListC.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/preCompile/RouterC.jsx" afterPath="$PROJECT_DIR$/static/js/preCompile/RouterC.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+    </list>
+    <ignored path="SFmovieLocation.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="DebuggerManager">
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <breakpoint_rules />
+    <ui_properties />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="SFmovieLocation" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="RouterC.jsx" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/preCompile/RouterC.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="31" selection-start="537" selection-end="537" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="2032">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainContentC.jsx" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/preCompile/MainContentC.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="25" selection-start="215" selection-end="215" vertical-scroll-proportion="0.0" vertical-offset="112" max-vertical-offset="1296">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MapC.jsx" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/preCompile/MapC.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="14" selection-start="641" selection-end="641" vertical-scroll-proportion="0.0" vertical-offset="336" max-vertical-offset="2176">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MovieListC.jsx" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/preCompile/MovieListC.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="56" column="0" selection-start="1729" selection-end="1729" vertical-scroll-proportion="0.0" vertical-offset="727" max-vertical-offset="1584">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlacesCard.jsx" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/js/preCompile/PlacesCard.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="133" column="44" selection-start="3743" selection-end="3743" vertical-scroll-proportion="2.860215" vertical-offset="0" max-vertical-offset="2816">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ActorsCard.jsx" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/preCompile/ActorsCard.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="89" selection-start="982" selection-end="988" vertical-scroll-proportion="0.0" vertical-offset="592" max-vertical-offset="1120">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MovieCardC.jsx" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/preCompile/MovieCardC.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="155" column="40" selection-start="3927" selection-end="3927" vertical-scroll-proportion="0.0" vertical-offset="2480" max-vertical-offset="3424">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="0" selection-start="733" selection-end="733" vertical-scroll-proportion="0.0" vertical-offset="384" max-vertical-offset="528">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/gulpfile.js" />
+        <option value="$PROJECT_DIR$/static/js/preCompile/view.jsx" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/static/js/data.json.js" />
+        <option value="$PROJECT_DIR$/static/js/preCompile/Store.js" />
+        <option value="$PROJECT_DIR$/static/js/preCompile/dataSample.js" />
+        <option value="$PROJECT_DIR$/static/js/preCompile/Page.jsx.js" />
+        <option value="$PROJECT_DIR$/static/js/preCompile/main.jsx" />
+        <option value="$PROJECT_DIR$/static/js/preCompile/Page.jsx" />
+        <option value="$PROJECT_DIR$/static/js/preCompile/YQLFindState.js" />
+        <option value="$PROJECT_DIR$/static/js/preCompile/MainPageComp.js" />
+        <option value="$PROJECT_DIR$/static/js/preCompile/DistanceCalculator.js" />
+        <option value="$PROJECT_DIR$/static/js/preCompile/AppendCoordsToData.js" />
+        <option value="$PROJECT_DIR$/static/js/preCompile/AppendDistToData.js" />
+        <option value="$PROJECT_DIR$/static/js/preCompile/Map.jsx.js" />
+        <option value="$PROJECT_DIR$/static/js/preCompile/NavBar.jsx" />
+        <option value="$PROJECT_DIR$/static/js/preCompile/MainPageData.js" />
+        <option value="$PROJECT_DIR$/static/js/MainPageData.js" />
+        <option value="$PROJECT_DIR$/static/js/preCompile/MainPageC.jsx" />
+        <option value="$PROJECT_DIR$/static/js/preCompile/laPutaMierda.jsx" />
+        <option value="$PROJECT_DIR$/static/js/preCompile/putamierda.jsx" />
+        <option value="$PROJECT_DIR$/static/js/preCompile/Geo.js" />
+        <option value="$PROJECT_DIR$/static/js/dataSample.js" />
+        <option value="$PROJECT_DIR$/static/js/preCompile/MovieCard.jsx" />
+        <option value="$PROJECT_DIR$/static/js/preCompile/AppendDistance.js" />
+        <option value="$PROJECT_DIR$/static/js/preCompile/FormatNames.js" />
+        <option value="$PROJECT_DIR$/static/js/preCompile/main.js" />
+        <option value="$PROJECT_DIR$/static/js/preCompile/PubSub.js" />
+        <option value="$PROJECT_DIR$/static/js/preCompile/MainMovieDetailC.jsx" />
+        <option value="$PROJECT_DIR$/static/js/preCompile/MainContentC.jsx" />
+        <option value="$PROJECT_DIR$/static/test.html" />
+        <option value="$PROJECT_DIR$/static/js/preCompile/RouterC.jsx" />
+        <option value="$PROJECT_DIR$/static/detail.html" />
+        <option value="$PROJECT_DIR$/static/js/preCompile/ActorsCard.jsx" />
+        <option value="$PROJECT_DIR$/static/main.html" />
+        <option value="$PROJECT_DIR$/static/js/preCompile/PlacesCard.jsx" />
+        <option value="$PROJECT_DIR$/static/js/preCompile/MovieCardC.jsx" />
+        <option value="$PROJECT_DIR$/static/js/preCompile/MovieListC.jsx" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/static/js/preCompile/MapC.jsx" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="169" />
+    <option name="y" value="38" />
+    <option name="width" value="1069" />
+    <option name="height" value="901" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Font" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="LayoutCode.rearrangeEntriesJSON" value="false" />
+    <property name="LayoutCode.rearrangeEntriesHTML" value="false" />
+    <property name="LayoutCode.rearrangeEntriesJavaScript" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="103" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="127" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="114" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="883" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="103" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="109" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="114" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="901" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="SearchEverywhereHistory" value="" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static" />
+      <recent name="$PROJECT_DIR$/static/js" />
+      <recent name="$PROJECT_DIR$/static/js/preCompile" />
+      <recent name="$PROJECT_DIR$/static/images" />
+      <recent name="$PROJECT_DIR$/static/public" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/js" />
+      <recent name="$PROJECT_DIR$/static/js/preCompile" />
+      <recent name="$PROJECT_DIR$/static/public" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.main.html">
+    <configuration default="false" name="detail.html" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true" temporary="true" uri="http://localhost:63342/SFmovieLocation/static/detail.html">
+      <RunnerSettings RunnerId="JavascriptDebugRunner" />
+      <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="test.html" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true" temporary="true" uri="http://localhost:63342/SFmovieLocation/static/test.html">
+      <RunnerSettings RunnerId="JavascriptDebugRunner" />
+      <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="main.html" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true" temporary="true" uri="http://localhost:63342/SFmovieLocation/static/main.html">
+      <RunnerSettings RunnerId="JavascriptDebugRunner" />
+      <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+      <browser start="false" url="" with-js-debugger="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
+    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Specs2RunConfiguration" factoryName="Specs2">
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <list size="3">
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.detail.html" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.test.html" />
+      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.main.html" />
+    </list>
+    <recent_temporary>
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.main.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.test.html" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.detail.html" />
+      </list>
+    </recent_temporary>
+    <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
+      <Host>localhost</Host>
+      <Port>5050</Port>
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="ToolWindowManager">
+    <frame x="169" y="38" width="1069" height="901" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2573696" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294271" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22650057" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17553614" sideWeight="0.6643991" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1967943" sideWeight="0.3344671" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19160998" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="1874" y="817" width="719" height="612" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+    <MESSAGE value="fixed error in MainContext,still need fix the map&#10;" />
+    <MESSAGE value="almost finished&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="almost finished&#10;" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="15" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/static/js/preCompile/MovieListC.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="0" selection-start="1718" selection-end="1718" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="1692">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/preCompile/PlacesCard.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="124" column="81" selection-start="3284" selection-end="3284" vertical-scroll-proportion="0.0" vertical-offset="1226" max-vertical-offset="3168">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/preCompile/ActorsCard.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="89" selection-start="982" selection-end="988" vertical-scroll-proportion="0.0" vertical-offset="666" max-vertical-offset="1260">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/preCompile/MovieCardC.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="155" column="42" selection-start="4426" selection-end="4426" vertical-scroll-proportion="0.0" vertical-offset="2790" max-vertical-offset="3834">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="0" selection-start="733" selection-end="733" vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="594">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/data.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/dataSample.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="84" selection-start="1466" selection-end="1466" vertical-scroll-proportion="0.0" vertical-offset="720" max-vertical-offset="954" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/preCompile/view.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="210" selection-end="234" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="306" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/preCompile/NavBar.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="5" selection-start="500" selection-end="500" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="522" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="44" selection-start="887" selection-end="887" vertical-scroll-proportion="0.0" vertical-offset="522" max-vertical-offset="828" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/preCompile/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="66" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="162" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="85" selection-start="361" selection-end="361" vertical-scroll-proportion="0.0" vertical-offset="234" max-vertical-offset="342" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/preCompile/view.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="210" selection-end="234" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="306" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/preCompile/NavBar.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="115" selection-start="500" selection-end="500" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="522" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="44" selection-start="887" selection-end="887" vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="782" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/preCompile/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="66" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="153" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="85" selection-start="361" selection-end="361" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="323" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/preCompile/view.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="210" selection-end="234" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="289" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/preCompile/NavBar.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="115" selection-start="500" selection-end="500" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="493" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/velocity-animate/velocity.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.2592592" vertical-offset="918" max-vertical-offset="96318" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="36" selection-start="38" selection-end="38" vertical-scroll-proportion="0.025641026" vertical-offset="0" max-vertical-offset="702" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/data.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/public/uikit-2.2.0/css/uikit.almost-flat.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1311" column="0" selection-start="26186" selection-end="26186" vertical-scroll-proportion="0.5504979" vertical-offset="21900" max-vertical-offset="112353" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/react-router/modules/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="209" selection-end="209" vertical-scroll-proportion="0.0952381" vertical-offset="0" max-vertical-offset="714" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="46" selection-start="490" selection-end="490" vertical-scroll-proportion="0.33226323" vertical-offset="31" max-vertical-offset="782" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/preCompile/Store.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="0" selection-start="0" selection-end="985" vertical-scroll-proportion="0.4607046" vertical-offset="306" max-vertical-offset="2635" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/preCompile/YQLFindState.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="0" selection-start="790" selection-end="790" vertical-scroll-proportion="0.6680217" vertical-offset="0" max-vertical-offset="738" />
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript5.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="131" column="16" selection-start="2425" selection-end="2425" vertical-scroll-proportion="0.33333334" vertical-offset="1987" max-vertical-offset="3247" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/preCompile/Geo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="55" selection-start="726" selection-end="726" vertical-scroll-proportion="0.5714286" vertical-offset="0" max-vertical-offset="714" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/preCompile/Page.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="51" selection-start="260" selection-end="260" vertical-scroll-proportion="0.18428184" vertical-offset="0" max-vertical-offset="738" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/preCompile/view.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="40" selection-start="197" selection-end="197" vertical-scroll-proportion="0.18428184" vertical-offset="0" max-vertical-offset="738" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/preCompile/DistanceCalculator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="37" selection-start="595" selection-end="595" vertical-scroll-proportion="0.38962606" vertical-offset="0" max-vertical-offset="829" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/preCompile/PubSub.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="31" selection-end="31" vertical-scroll-proportion="0.04978038" vertical-offset="0" max-vertical-offset="683" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/MainPageData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="63" selection-start="237" selection-end="237" vertical-scroll-proportion="0.20298508" vertical-offset="0" max-vertical-offset="91885" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/dataSample.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="52" selection-start="698" selection-end="698" vertical-scroll-proportion="0.55263156" vertical-offset="0" max-vertical-offset="3213" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/preCompile/AppendDistance.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="85" selection-start="794" selection-end="794" vertical-scroll-proportion="0.41729894" vertical-offset="14" max-vertical-offset="748" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/preCompile/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="38" selection-start="268" selection-end="268" vertical-scroll-proportion="0.2837633" vertical-offset="0" max-vertical-offset="659" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/preCompile/NavBar.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="87" selection-start="845" selection-end="845" vertical-scroll-proportion="0.4670571" vertical-offset="378" max-vertical-offset="1292" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/hugedata.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="472243" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/preCompile/FormatNames.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="62" selection-start="301" selection-end="301" vertical-scroll-proportion="0.31691077" vertical-offset="0" max-vertical-offset="751" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/preCompile/MainMovieDetailC.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="28" selection-start="345" selection-end="345" vertical-scroll-proportion="0.20268257" vertical-offset="0" max-vertical-offset="671" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="279" column="0" selection-start="6952" selection-end="6952" vertical-scroll-proportion="-172.61539" vertical-offset="255" max-vertical-offset="5117" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/preCompile/MovieCardC.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="155" column="40" selection-start="3927" selection-end="3927" vertical-scroll-proportion="0.0" vertical-offset="2790" max-vertical-offset="3852">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25586" column="98" selection-start="784555" selection-end="784555" vertical-scroll-proportion="-3.6494412" vertical-offset="437575" max-vertical-offset="450398" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/preCompile/ActorsCard.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="89" selection-start="982" selection-end="988" vertical-scroll-proportion="0.0" vertical-offset="9" max-vertical-offset="1190">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/preCompile/MainContentC.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="25" selection-start="215" selection-end="215" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1620">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/preCompile/RouterC.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="31" selection-start="537" selection-end="537" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="2032">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="0" selection-start="733" selection-end="733" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="561">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/preCompile/MapC.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="14" selection-start="641" selection-end="641" vertical-scroll-proportion="0.0" vertical-offset="336" max-vertical-offset="2176">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/preCompile/MovieListC.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="0" selection-start="1729" selection-end="1729" vertical-scroll-proportion="0.0" vertical-offset="1008" max-vertical-offset="1782">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/preCompile/PlacesCard.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="133" column="44" selection-start="3743" selection-end="3743" vertical-scroll-proportion="2.860215" vertical-offset="0" max-vertical-offset="2816">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+
