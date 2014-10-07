@@ -1,0 +1,17 @@
+{
+
+    "ternjs": {
+        "loadEagerly": [
+              "static/js/main.js"
+        ],
+        "exclude": ["wordpress/**", "node_modules/**"],
+        "libs": ["browser", "jquery"],
+        "plugins": {
+            "nodejs" : {"dontLoad" : false},
+            "requirejs": {
+                "baseURL": "./js"
+            }
+        }
+
+    }
+}
