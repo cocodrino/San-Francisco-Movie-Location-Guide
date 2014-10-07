@@ -1,6 +1,7 @@
 var React = require("react");
 var Router = require('react-router');
 var Route = Router.Route;
+var CSSTransitionGroup = require('react/lib/ReactCSSTransitionGroup');
 var Routes = Router.Routes;
 var DefaultRoute = Router.DefaultRoute;
 var Link = Router.Link;
@@ -25,18 +26,12 @@ var MenuC = React.createClass({
       return(
          <div>
             <nav className="uk-navbar navbar_fix uk-navbar-attached shadow" style={attachIt}>
-               <div className="uk-hidden-medium uk-hidden-large mini-menu">
-                  <a href="" data-uk-offcanvas>
-                     <i className="uk-icon-bars uk-icon-medium"></i>
-                  </a>
-               </div>
-
                <a href="" className="uk-navbar-brand navbar-brand-fix">
-                  <img className="logo" src="images/logogrande3B2.png" alt="logo"/>
+                  <img className="logo" src="static/images/logogrande3B2.png" alt="logo"/>
                </a>
 
 
-               <ul className="uk-navbar-nav uk-hidden-small">
+               <ul className="uk-navbar-nav  ">
 
                   <li className="uk-active2 ">
                      <a className="uk-navbar-nav-subtitle"
@@ -74,8 +69,9 @@ var MenuC = React.createClass({
 
             </nav>
             <div>
-            {this.props.activeRouteHandler()}
-
+            <CSSTransitionGroup transitionName='contentTransition'>
+            <this.props.activeRouteHandler/>
+            </CSSTransitionGroup>
             </div>
 
 

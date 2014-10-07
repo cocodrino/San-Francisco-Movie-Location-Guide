@@ -12,13 +12,15 @@ function getLocation(cllb) {
          var distance = calculateDistance(lat, lon,
             sf_centroid[0], sf_centroid[1]);
 
-         cllb([distance < 30, [lat, lon]])
+         cllb([distance < 30, [lat, lon]]);
+          
 
 
       });
    } else {
       x.innerHTML = "Geolocation is not supported by this browser.";
-      return cllb([false, [0, 0]])
+      return cllb([false, [0, 0]]);
+       
    }
 }
 

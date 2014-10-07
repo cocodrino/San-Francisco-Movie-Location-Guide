@@ -13,8 +13,8 @@ var MainMovieDetailC = React.createClass({
           <ActorCard movie={this.props.params.movie}/>
           <PlacesCard movie={this.props.params.movie}/>
        </div>
-    )
+    );
   }
 });
 
-module.exports = MainMovieDetailC
+module.exports = MainMovieDetailC;

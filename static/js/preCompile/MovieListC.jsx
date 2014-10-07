@@ -2,6 +2,8 @@ var React = require("react");
 var Format = require("./FormatNames");
 var Router = require('react-router');
 var Link = Router.Link;
+var Ani = require("./AnimationC.jsx");
+
 /**
  * Movie Bar Component
  * Display poster,name,rating and (optional) distance for movie main page
@@ -19,9 +21,9 @@ var MovieMainC = React.createClass({
          <div>{this.props.score}/{this.props.distance}</div>;
 
       return(
-         <li id={Format.toHtml(this.props.name)} className="movieBar">
+         <li id={Format.toHtml(this.props.name)} className="movieBar" >
             <Link to="detail" params={{movie: this.props.name}}>
-               <div className="uk-grid uk-panel-box data-uk-grid-match">
+               <div className="uk-grid uk-panel-box data-uk-grid-match fixNew">
                   <div className="uk-width-large-1-10 uk-width-medium-2-10 uk-hidden-small poster">
                      <img src={this.props.poster}/>
                   </div>
@@ -47,7 +49,7 @@ var MovieMainC = React.createClass({
                </div>
             </Link>
          </li>
-         )
+         );
    }
 });
 
@@ -64,7 +66,9 @@ var MovieMainC = React.createClass({
  * @param {movies[]} data movies to show
  */
 var MovieListC = React.createClass({
-   render: function () {
+
+      render: function () {
+
       var sortedMovies = _.sortBy(this.props.data, this.props.sort).reverse();
       var movies = sortedMovies.map(function (data) {
          return <MovieMainC poster={data.Poster}
@@ -72,17 +76,23 @@ var MovieListC = React.createClass({
          score={data.score}
          distance = {data.distance_from_user}
          key={Format.toHtml(data.name)}
-         />
+         />;
       });
 
 
 
       return(
-         <div className="uk-width-9-10 uk-container-center"    id="movieList">
+         <div className="uk-width-9-10 uk-container-center  uk-scrollable-box"    id="movieList">
             <ul className="uk-list uk-list-line">
-      {movies}
+            <Ani
+               onElement=".movieBar"
+              transitionT="slideDownBigIn"
+              transitionP={{drag : true, stagger : 170}}>
+            >{movies}</Ani>
             </ul>
-         </div>)
+         </div>);
+
+
    }
 });
 

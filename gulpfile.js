@@ -27,7 +27,7 @@ gulp.task('browserify', function(){
 
 gulp.task("watch", function() {
       console.log("watching!!");
-      gulp.watch("static/js/preCompile/*.jsx", ["browserify"]);
+      gulp.watch([ "static/js/preCompile/*.jsx","static/js/*.json"], ["browserify"]);
 
       livereload.listen();
 });

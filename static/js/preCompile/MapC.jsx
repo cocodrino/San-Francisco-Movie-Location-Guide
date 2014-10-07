@@ -19,14 +19,14 @@ var Format = require("./FormatNames");
  * @param {movies[]} movies movies to show
  */
 var MapC = React.createClass({
-   limitDisplaMovies: 40,
+   LIMITDISPLAYMOVIES: 4,
 
    getInitialState: function () {
-      return {show_clicked: false}
+      return  {show_clicked: false}
    },
 
    softScrollTo: function (_id) {
-      $('html, body').animate({
+      $('#movieList').animate({
          scrollTop: $("#" + _id).offset().top
       }, 500);
       return false;
@@ -41,7 +41,7 @@ var MapC = React.createClass({
    getMarks: function (mvList) {
       var it = this;
       var _mk =
-         _.take(mvList, this.limitDisplaMovies)
+         _.take(mvList, this.LIMITDISPLAYMOVIES)
             .map(function (movie) {
                return (movie.coordinates.map(function (coord) {
                   return(
@@ -110,7 +110,7 @@ var MapC = React.createClass({
       var my_style = {paddingBottom:"20px", width: WIDTH};
 
       return(
-         <div className="uk-container-center" style={my_style}>
+         <div className="uk-container-center mapStaticBox" style={my_style}>
             {showMapOptions}
 
             <hr className="uk-article-divider green-separator"/>
