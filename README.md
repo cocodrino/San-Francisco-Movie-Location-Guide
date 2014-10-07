@@ -17,11 +17,22 @@ and of course:
 
 for this amazing opportunity..many thanks!!!...
 
+NOTE________________________________________________________
+OH GOD, the main.js file which is created after run browserify hadn't added to git
+this file is only the product of run browserify, all the scripts exist since the first day, 
+hope there are not problems with it
+
+I notice this today because I was creating the static web page for demostration:
+it is available now
 
 
+ 
+http://cocodrino.github.io/San-Francisco-Movie-Location-Guide/
 
-the project needs some fixes and improvements and better documentation ...
+ 
+
+
+sorry, hope it doesnt generate problems...
 the entry point is   static/main.html...
 
 thanks!
-
