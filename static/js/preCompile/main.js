@@ -11,7 +11,10 @@ var route = require('./NavBar.jsx');*/
 var router = require('./MainContentC.jsx');
 var router2 = require('./RouterC.jsx');
 
-React.renderComponent(router2, document.getElementById('content'));
+$("document").ready(function(){
+
+   React.renderComponent(router2, document.getElementById('content'));
+});
 
 
 /*
