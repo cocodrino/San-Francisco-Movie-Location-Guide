@@ -19,7 +19,7 @@ var Format = require("./FormatNames");
  * @param {movies[]} movies movies to show
  */
 var MapC = React.createClass({
-   LIMITDISPLAYMOVIES: 4,
+   LIMITDISPLAYMOVIES: 50,
 
    getInitialState: function () {
       return  {show_clicked: false}

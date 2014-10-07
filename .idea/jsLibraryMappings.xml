@@ -2,7 +2,6 @@
 <project version="4">
   <component name="JavaScriptLibraryMappings">
     <file url="file://$PROJECT_DIR$" libraries="{Node.js Dependencies for SFmovieLocation}" />
-    <file url="file://$PROJECT_DIR$/static/main.html" libraries="{jquery-1.11.1}" />
   </component>
 </project>
 

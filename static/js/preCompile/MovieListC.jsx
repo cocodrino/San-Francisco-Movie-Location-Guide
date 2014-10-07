@@ -88,7 +88,22 @@ var MovieListC = React.createClass({
                onElement=".movieBar"
               transitionT="slideDownBigIn"
               transitionP={{drag : true, stagger : 170}}>
-            >{movies}</Ani>
+            >
+           <div className="uk-alert" data-uk-alert>
+                <a href="" className="uk-alert-close uk-close"></a>
+                <p>
+                Some poster couldn't be correctly loaded, seems a limitation with the github hosting...
+                please clone the project from &nbsp
+
+                <a href="https://github.com/cocodrino/San-Francisco-Movie-Location-Guide/tree/gh-pages">
+                     here
+               </a>
+
+                </p>
+
+            </div>
+            {movies}
+            </Ani>
             </ul>
          </div>);
 

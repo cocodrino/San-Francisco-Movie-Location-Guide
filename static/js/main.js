@@ -26251,10 +26251,11 @@ var ActorCard = React.createClass({displayName: 'ActorCard',
         + Fm.toHtml( this.props.name )+ "?maxwidth=120&maxheight=120&mode=fillcropmid";
 
     return(
-         React.DOM.div({className: "uk-width-1-3"}, 
+         React.DOM.div({className: "uk-width-1-"+(this.props.count)+" uk-container-center"}, 
+            React.DOM.div(null, 
             React.DOM.h3(null, this.props.name), 
             React.DOM.img({src: url_img})
-
+               )
          )
     )
   }
@@ -26267,10 +26268,10 @@ var ActorsCard = React.createClass({displayName: 'ActorsCard',
         return [ob["actor1"], ob["actor2"], ob["actor3"]]
      }));
 
-     var actorsElem = _.unique(_.flatten(actors))
+     var actorCount = _.unique(_.flatten(actors))
         .filter(function(x){return x.length>0})
-        .map(function (_name) {
-        return ActorCard({name: _name})
+     var actorsElem =  actorCount.map(function (_name) {
+        return ActorCard({name: _name, count: actorCount.length})
      });
 
     return(
@@ -26565,7 +26566,7 @@ var Format = require("./FormatNames");
  * @param {movies[]} movies movies to show
  */
 var MapC = React.createClass({displayName: 'MapC',
-   LIMITDISPLAYMOVIES: 4,
+   LIMITDISPLAYMOVIES: 50,
 
    getInitialState: function () {
       return  {show_clicked: false}
@@ -26685,49 +26686,49 @@ var PosterC = React.createClass({displayName: 'PosterC',
       var originData = DATA_SPECIFIC[this.props.movie]["sfdata"][0];
       //I will use an array instead of an obj cause js doesnt provide a functional way for iterate across an obj
       var details = [
-   ["director", originData["director"]],
-    ["distributor", originData["distributor"]],
-    ["writer", originData["writer"]],
-    ["company", originData["comp"]],
-    ["year", originData["year"] || DATA_SPECIFIC[this.props.movie]["tomatodata"]["year"]]
+         ["director", originData["director"]],
+         ["distributor", originData["distributor"]],
+         ["writer", originData["writer"]],
+         ["company", originData["comp"]],
+         ["year", originData["year"] || DATA_SPECIFIC[this.props.movie]["tomatodata"]["year"]]
 
-   ];
+      ];
 
-var detailElement = details
-   .filter(function (v) {
-      return v[1] != null
-   })
-.map(function (v) {
+      var detailElement = details
+         .filter(function (v) {
+            return v[1] != null
+         })
+         .map(function (v) {
 
-   return React.DOM.div(null, 
-   React.DOM.h4(null, v[0]), 
-   React.DOM.h6(null, v[1])
-   )
-});
+            return React.DOM.div(null, 
+               React.DOM.h4(null, v[0]), 
+               React.DOM.h6(null, v[1])
+            )
+         });
 
-return(
-      React.DOM.p(null, 
+      return(
+         React.DOM.p(null, 
 
-      React.DOM.div({className: "uk-width-medium-2-6 fixNew  uk-panel-box poster-with-data"}, 
-      React.DOM.div({className: "uk-width-medium-1-2 uk-container-center image-box"}, 
-      React.DOM.img({src: posterURL})
-      ), 
+            React.DOM.div({className: "uk-width-medium-2-6 fixNew  uk-panel-box poster-with-data"}, 
+               React.DOM.div({className: "uk-width-medium-1-2 uk-container-center image-box"}, 
+                  React.DOM.img({src: posterURL})
+               ), 
 
-      React.DOM.div({className: "compact-movie-det"}, 
+               React.DOM.div({className: "compact-movie-det"}, 
 
       detailElement
 
-      )
+               )
 
-      )
-
-
-      )
+            )
 
 
+         )
 
-)
-}
+
+
+         )
+   }
 });
 
 //received props :   also movie
@@ -26735,57 +26736,55 @@ var ValorationC = React.createClass({displayName: 'ValorationC',
    render: function () {
       var originData = DATA_SPECIFIC[this.props.movie]["tomatodata"]["ratings"];
 
-      var ratingElement = (
-         React.DOM.div(null, 
-         React.DOM.h3(null, "Audience Rating"), 
-         React.DOM.h4(null, originData["audience_rating"] || "N/A"), 
-         React.DOM.h3(null, "Critics Rating"), 
-         React.DOM.h4(null, originData["critics_rating"] || "N/A"), 
-         React.DOM.h3(null, "Critics Score"), 
-         React.DOM.h4(null, originData["critics_score"] || "N/A"), 
-         React.DOM.h3(null, "Audience Score"), 
-         React.DOM.h4(null, originData["audience_score"] || "N/A")
+      function fixScores(value) {
+         if (value !== null || value !== -1) {
+            return value;
+         } else {
+            return "N/A";
+         }
+      }
 
-         )
-
-         );
 
       return(
 
 
          React.DOM.div({className: "uk-width-5-6 uk-container-center uk-panel-box"}, 
-         React.DOM.div({className: "uk-grid"}, 
-         React.DOM.div({className: "uk-width-2-4 centered-text"}, 
-         React.DOM.div({className: "uk-grid"}, 
-         React.DOM.div({className: "uk-width-1-1"}, 
-         React.DOM.h5(null, "Critics")
-         ), 
-         React.DOM.div({className: "point-rating uk-width-1-1 "}, 
-         originData["critics_score"] || "N/A"
-         ), 
-         React.DOM.div({className: "uk-width-1-1"}, 
-         originData["critics_score"] || "N/A"
-         )
+            React.DOM.div({className: "uk-grid"}, 
+               React.DOM.div({className: "uk-width-2-4 centered-text"}, 
+                  React.DOM.div({className: "uk-grid"}, 
+                     React.DOM.div({className: "uk-width-1-1"}, 
+                        React.DOM.h5(null, "Critics")
+                     ), 
+                     React.DOM.div({className: "point-rating uk-width-1-1 "}, 
+                       fixScores(originData["critics_score"])
+                     ), 
+                     React.DOM.div({className: "uk-width-1-1"}, 
+                       (originData["critics_rating"]) 
+                     )
 
 
-         )
+                  )
 
 
-         ), 
+               ), 
+               React.DOM.div({className: "uk-width-2-4 centered-text"}, 
+                  React.DOM.div({className: "uk-grid"}, 
+                     React.DOM.div({className: "uk-width-1-1"}, 
+                        React.DOM.h5(null, "Audience")
+                     ), 
+                     React.DOM.div({className: "uk-width-1-1 point-rating"}, 
+                  fixScores(originData["audience_score"])
+                     ), 
+                     React.DOM.div({className: "uk-width-1-1"}, 
+                  originData["audience_rating"] || "N/A"
+                     )
 
-         React.DOM.div({className: "uk-grid"}, 
-         React.DOM.div({className: "uk-width-1-1"}, 
-         React.DOM.h5(null, "Audience")
-         ), 
-         React.DOM.div({className: "uk-width-1-1 point-rating"}, 
-         originData["audience_score"] || "N/A"
-      ), 
-         React.DOM.div({className: "uk-width-1-1"}, 
-         originData["audience_rating"] || "N/A"
-      )
+                  )
+               )
 
-         )
-         )
+            )
+
+
          )
 
 
@@ -26796,49 +26795,72 @@ var ValorationC = React.createClass({displayName: 'ValorationC',
 //need pass a movie prop
 var SynopsisC = React.createClass({displayName: 'SynopsisC',
    getInitialState: function () {
-      return {content: DATA_SPECIFIC[this.props.movie]["tomatodata"]["synopsis"]}
+      return {content: DATA_SPECIFIC[this.props.movie]["tomatodata"]["synopsis"], freebaseContent: null}
    },
 
-    componentDidMount: function () {
-       var that = this; //because that is better than it :D
+   componentDidMount: function () {
+      var that = this; //because that is better than it :D
 
 
-       $.getJSON("https://www.googleapis.com/freebase/v1/search?query=" + encodeURIComponent(this.props.movie.toLowerCase()),
-          function (response) {
-             var responseFB = response.result;
+      $.getJSON("https://www.googleapis.com/freebase/v1/search?query=" + encodeURIComponent(this.props.movie.toLowerCase()),
+         function (response) {
+            var responseFB = response.result;
 
-             if (response.result[0] && (responseFB[0]["id"] || responseFB[0]["mid"])) {
-                var id = responseFB[0]["id"] || responseFB[0]["mid"];
+            if (response.result[0] && (responseFB[0]["id"] || responseFB[0]["mid"])) {
+               var id = responseFB[0]["id"] || responseFB[0]["mid"];
 
-                $.getJSON("https://www.googleapis.com/freebase/v1/topic" + id, function (r) {
-                   var synopsis =
-                   jsonPath(r, '$../common/document/text..value');
+               $.getJSON("https://www.googleapis.com/freebase/v1/topic" + id, function (r) {
+                  var synopsis =
+                     jsonPath(r, '$../common/document/text..value');
 
-                if (synopsis) {
-                   that.setState({content: synopsis[0]})
-                }
-                })
-             }
-
-
-          })
+                  if (synopsis) {
+                     that.setState({freebaseContent: synopsis[0]})
+                  }
+               })
+            }
 
 
-    },
+         })
 
 
-    render: function () {
-       return(
-             React.DOM.div({className: "uk-grid"}, 
-             React.DOM.div({className: "uk-width-6-6"}, 
-             React.DOM.p(null, this.state.content), 
-             React.DOM.div({className: "uk-text-warning"}, React.DOM.h5(null, "Data provide by Freebase"))
-             )
-             )
+   },
 
 
-             )
-    }
+   render: function () {
+      var frebaseIsLoad = this.state.freebaseContent ?
+         React.DOM.div(null, 
+            React.DOM.div({className: "uk-text-warning"}, 
+               React.DOM.h5(null, "Data provide by Freebase api")
+            ), 
+            React.DOM.p(null, this.state.freebaseContent)
+         )
+         :
+         React.DOM.div(null, "Loading freebase data, please wait.....")
+
+      var tomat = React.DOM.div(null);
+      if (this.state.content !== "") {
+         tomat = (
+            React.DOM.div(null, 
+               React.DOM.div({className: "uk-text-warning"}, 
+                  React.DOM.h5(null, "Data provide by Rotten Tomatoes api")
+               ), 
+               React.DOM.p(null, this.state.content)
+            ));
+
+      }
+
+      return(
+         React.DOM.div({className: "uk-grid"}, 
+            React.DOM.div({className: "uk-width-6-6"}, 
+                  tomat, 
+               React.DOM.hr({className: "uk-article-divider green-separator"}), 
+               React.DOM.p(null, frebaseIsLoad)
+            )
+         )
+
+
+         );
+   }
 });
 
 //received props :   movie
@@ -26846,36 +26868,36 @@ var MovieCardC = React.createClass({displayName: 'MovieCardC',
    render: function () {
       return(
          React.DOM.div({className: "movieContainer uk-width-8-10 uk-container-center card-shadow"}, 
-         React.DOM.div({className: "Bar_Movie_Card"}, 
-         React.DOM.div({className: "uk-width-9-10 uk-container-center uk-article"}, 
-         React.DOM.div({className: "uk-grid"}, 
-         React.DOM.div({className: "uk-width-1-3"}, 
-         React.DOM.h2({className: "uk-h3 "}, "title")
-         ), 
-         React.DOM.div({className: "uk-width-medium-2-3 uk-container-center centered-text"}, 
-         React.DOM.p({className: "fontTitles title"}, this.props.movie)
-         )
+            React.DOM.div({className: "Bar_Movie_Card"}, 
+               React.DOM.div({className: "uk-width-9-10 uk-container-center uk-article"}, 
+                  React.DOM.div({className: "uk-grid"}, 
+                     React.DOM.div({className: "uk-width-1-3"}, 
+                        React.DOM.h2({className: "uk-h3 "}, "title")
+                     ), 
+                     React.DOM.div({className: "uk-width-medium-2-3 uk-container-center centered-text"}, 
+                        React.DOM.p({className: "fontTitles title"}, this.props.movie)
+                     )
 
-         )
-         )
-
-
-         ), 
-
-         React.DOM.div({className: "uk-grid fixNew"}, 
-         PosterC({movie: this.props.movie}), 
+                  )
+               )
 
 
-         React.DOM.div({className: "uk-width-4-6 description-col"}, 
+            ), 
 
-         SynopsisC({movie: this.props.movie}), 
+            React.DOM.div({className: "uk-grid fixNew"}, 
+               PosterC({movie: this.props.movie}), 
 
 
-         React.DOM.h2({className: "uk-h3"}, "Valoration"), 
-         React.DOM.hr({className: "uk-article-divider"}), 
-         ValorationC({movie: this.props.movie})
-         )
-         )
+               React.DOM.div({className: "uk-width-4-6 description-col"}, 
+
+                  SynopsisC({movie: this.props.movie}), 
+
+
+                  React.DOM.h2({className: "uk-h3"}, "Valoration"), 
+                  React.DOM.hr({className: "uk-article-divider"}), 
+                  ValorationC({movie: this.props.movie})
+               )
+            )
 
          )
          )
@@ -26976,7 +26998,20 @@ var MovieListC = React.createClass({displayName: 'MovieListC',
                onElement: ".movieBar", 
               transitionT: "slideDownBigIn", 
               transitionP: {drag : true, stagger : 170}}, 
-            ">", movies)
+            ">", 
+           React.DOM.div({className: "uk-alert", 'data-uk-alert': true}, 
+                React.DOM.a({href: "", className: "uk-alert-close uk-close"}), 
+                React.DOM.p(null, 
+                "Some poster couldn't be correctly loaded, seems a limitation with the github hosting..." + ' ' +
+                "please clone the project from undefined            ", React.DOM.a({href: "https://github.com/cocodrino/San-Francisco-Movie-Location-Guide/tree/gh-pages"}, 
+                     "here"
+               )
+
+                )
+
+            ), 
+            movies
+            )
             )
          ));
 
@@ -27077,7 +27112,9 @@ var PlaceCard = React.createClass({displayName: 'PlaceCard',
       var that = this; //because that is better than it :D
 
 
-      $.getJSON("https://www.googleapis.com/freebase/v1/search?query=" + encodeURIComponent(this.props.location.toLowerCase()),
+      var locationFixed = (this.props.location.toLowerCase()).replace(/\([^\)]*\)/g, '')  + " San Francisco";
+
+      $.getJSON("https://www.googleapis.com/freebase/v1/search?query=" + encodeURIComponent(locationFixed),
          function (response) {
             var responseFB = response.result;
 
@@ -27158,6 +27195,7 @@ var PlacesCard = React.createClass({displayName: 'PlacesCard',
 });
 
 module.exports = PlacesCard
+
 },{"react":218}],231:[function(require,module,exports){
 /** @jsx React.DOM */var React = require("react");
 var Router = require('react-router');
@@ -27229,7 +27267,16 @@ var MenuC = React.createClass({displayName: 'MenuC',
                )
 
             ), 
+React.DOM.div({className: "uk-alert uk-alert-danger"}, 
+                 React.DOM.p(null, 
+                     "Some kind of github limitation avoid correct load of poster images..." + ' ' +
+                     "Plase clone the github repository for a correct visualization", 
+                     React.DOM.a({href: "https://github.com/cocodrino/San-Francisco-Movie-Location-Guide/tree/gh-pages"}, "updated"), 
+                     React.DOM.a({href: "https://github.com/cocodrino/San-Francisco-Movie-Location-Guide/tree/master"}, "original")
+                  )
+            ), 
             React.DOM.div(null, 
+
             CSSTransitionGroup({transitionName: "contentTransition"}, 
             this.props.activeRouteHandler(null)
             )

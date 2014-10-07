@@ -11,10 +11,11 @@ var ActorCard = React.createClass({
         + Fm.toHtml( this.props.name )+ "?maxwidth=120&maxheight=120&mode=fillcropmid";
 
     return(
-         <div className="uk-width-1-3">
+         <div className={"uk-width-1-"+(this.props.count)+"  uk-container-center"}>
+            <div>
             <h3>{this.props.name}</h3>
             <img src={url_img}/>
-
+               </div>
          </div>
     )
   }
@@ -27,10 +28,10 @@ var ActorsCard = React.createClass({
         return [ob["actor1"], ob["actor2"], ob["actor3"]]
      }));
 
-     var actorsElem = _.unique(_.flatten(actors))
+     var actorCount = _.unique(_.flatten(actors))
         .filter(function(x){return x.length>0})
-        .map(function (_name) {
-        return <ActorCard name={_name}/>
+     var actorsElem =  actorCount.map(function (_name) {
+        return <ActorCard name={_name} count={actorCount.length}/>
      });
 
     return(

@@ -68,7 +68,16 @@ var MenuC = React.createClass({
                </ul>
 
             </nav>
+<div className="uk-alert uk-alert-danger">
+                 <p>
+                     Some kind of github limitation avoid correct load of poster images...
+                     Plase clone the github repository for a correct visualization
+                     <a href="https://github.com/cocodrino/San-Francisco-Movie-Location-Guide/tree/gh-pages">updated</a>
+                     <a href="https://github.com/cocodrino/San-Francisco-Movie-Location-Guide/tree/master">original</a>
+                  </p>
+            </div>
             <div>
+
             <CSSTransitionGroup transitionName='contentTransition'>
             <this.props.activeRouteHandler/>
             </CSSTransitionGroup>
