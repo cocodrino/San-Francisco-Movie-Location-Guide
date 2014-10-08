@@ -48,7 +48,7 @@ var MenuC = React.createClass({
                      <span>
                         <span className="uk-navbar-nav-subtitle">
                            <i className="uk-container-center uk-icon-group
-                   uk-icon-small correction icons" data-uk-tooltip title="Coming soon..."></i>
+                   uk-icon-small correction icons"  data-uk-tooltip="{pos:'bottom'}" title="Coming soon..."></i>
 
 
                            <div className="text-logo">Actor</div>

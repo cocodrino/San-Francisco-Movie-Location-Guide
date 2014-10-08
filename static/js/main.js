@@ -26250,12 +26250,15 @@ var ActorCard = React.createClass({displayName: 'ActorCard',
      var url_img = "https://usercontent.googleapis.com/freebase/v1/image/en/"
         + Fm.toHtml( this.props.name )+ "?maxwidth=120&maxheight=120&mode=fillcropmid";
 
+     var _style={"width" : 120};
+     var _style2 = {textAlign: "center"};
+
     return(
-         React.DOM.div({className: "uk-width-1-"+(this.props.count)+" uk-container-center"}, 
-            React.DOM.div(null, 
+         React.DOM.div({style: _style2, className: "uk-width-1-"+(this.props.count) }, 
             React.DOM.h3(null, this.props.name), 
+            React.DOM.div({style: _style, className: "uk-container-center"}, 
             React.DOM.img({src: url_img})
-               )
+            )
          )
     )
   }
@@ -26737,7 +26740,7 @@ var ValorationC = React.createClass({displayName: 'ValorationC',
       var originData = DATA_SPECIFIC[this.props.movie]["tomatodata"]["ratings"];
 
       function fixScores(value) {
-         if (value !== null || value !== -1) {
+         if (value !== null && Number(value) !== -1) {
             return value;
          } else {
             return "N/A";
@@ -27002,9 +27005,11 @@ var MovieListC = React.createClass({displayName: 'MovieListC',
            React.DOM.div({className: "uk-alert", 'data-uk-alert': true}, 
                 React.DOM.a({href: "", className: "uk-alert-close uk-close"}), 
                 React.DOM.p(null, 
-                "Some poster couldn't be correctly loaded, seems a limitation with the github hosting..." + ' ' +
-                "please clone the project from undefined            ", React.DOM.a({href: "https://github.com/cocodrino/San-Francisco-Movie-Location-Guide/tree/gh-pages"}, 
-                     "here"
+                "\"Some poster couldn't be correctly loaded, seems a limitation with the github hosting..." + ' ' +
+                "please clone the project from\"", 
+
+                React.DOM.a({href: "https://github.com/cocodrino/San-Francisco-Movie-Location-Guide/tree/gh-pages"}, 
+                     "\" here\""
                )
 
                 )
@@ -27044,7 +27049,11 @@ var DescriptionC = React.createClass({displayName: 'DescriptionC',
 
 
 var ImagesC = React.createClass({displayName: 'ImagesC',
+
+
+
    render: function () {
+      var _style = {paddingTop: 8};
       var images_ID = jsonPath(this.props.path, '$../common/topic/image..values..id');
       var images = React.DOM.div({className: "uk-text-danger"}, 
          React.DOM.h5(null, "I can't find any image sorry")
@@ -27052,18 +27061,19 @@ var ImagesC = React.createClass({displayName: 'ImagesC',
       if (images_ID) {
          images = images_ID.map(function (img_id) {
             return(
-               React.DOM.p(null, 
-                  React.DOM.dt(null, "Photo:"), 
-                  React.DOM.dd(null, 
-                     React.DOM.img({src: "https://usercontent.googleapis.com/freebase/v1/image" + img_id + "?maxwidth=300&maxheight=300&mode=fillcropmid"})
-                  )
-               ))
+               React.DOM.div({className: "uk-width-1-2 "}, 
+                  React.DOM.img({
+
+                  style: _style, 
+                  src: "https://usercontent.googleapis.com/freebase/v1/image" + img_id + "?maxwidth=300&maxheight=300&mode=fillcropmid"})
+               )
+               )
          });
       }
 
 
       return(
-         React.DOM.div(null, 
+         React.DOM.div({className: "uk-container-center uk-grid"}, 
        images
          )
          )
@@ -27097,13 +27107,24 @@ var UbicationC = React.createClass({displayName: 'UbicationC',
    }
 });
 
+var StaticMap = React.createClass({displayName: 'StaticMap',
+   render: function () {
+      var urlFormat = "http://maps.googleapis.com/maps/api/staticmap?center="
+         + this.props.patch + ",San Francisco&size=300x300&zoom=15&markers=color:red|label:Movie|"
+         + this.props.patch + ",San Francisco"
+      return(
+         React.DOM.img({style: {width: 300}, className: "uk-container-center", src: urlFormat})
+         )
+   }
+});
+
 
 //mental note...don't use again the tomato rotten api...sucks!
 var PlaceCard = React.createClass({displayName: 'PlaceCard',
 
 
    getInitialState: function () {
-      return {properties: null}
+      return {properties: null, place: null}
 
 
    },
@@ -27112,9 +27133,9 @@ var PlaceCard = React.createClass({displayName: 'PlaceCard',
       var that = this; //because that is better than it :D
 
 
-      var locationFixed = (this.props.location.toLowerCase()).replace(/\([^\)]*\)/g, '')  + " San Francisco";
+      var locationFixed = (this.props.location.toLowerCase()).replace(/\([^\)]*\)/g, '');
 
-      $.getJSON("https://www.googleapis.com/freebase/v1/search?query=" + encodeURIComponent(locationFixed),
+      $.getJSON("https://www.googleapis.com/freebase/v1/search?query=" + encodeURIComponent(locationFixed + " San Francisco"),
          function (response) {
             var responseFB = response.result;
 
@@ -27122,13 +27143,12 @@ var PlaceCard = React.createClass({displayName: 'PlaceCard',
                var id = responseFB[0]["id"] || responseFB[0]["mid"];
 
                $.getJSON("https://www.googleapis.com/freebase/v1/topic" + id, function (r) {
-                  that.setState({properties: r.property})
+                  that.setState({properties: r.property, place: locationFixed})
                })
             }
 
 
          })
-
 
    },
 
@@ -27138,6 +27158,7 @@ var PlaceCard = React.createClass({displayName: 'PlaceCard',
             this.state.properties ?
                React.DOM.dl({className: "uk-description-list-horizontal"}, 
                   DescriptionC({path: this.state.properties}), 
+                  StaticMap({patch: this.state.place}), 
                   ImagesC({path: this.state.properties}), 
                   WebsiteC({path: this.state.properties}), 
                   UbicationC({path: this.state.properties})
@@ -27168,8 +27189,6 @@ var PlaceCard = React.createClass({displayName: 'PlaceCard',
             React.DOM.hr({className: "uk-article-divider"})
 
          )
-
-
 
 
          )
@@ -27247,7 +27266,7 @@ var MenuC = React.createClass({displayName: 'MenuC',
                      React.DOM.span(null, 
                         React.DOM.span({className: "uk-navbar-nav-subtitle"}, 
                            React.DOM.i({className: "uk-container-center uk-icon-group" + ' ' +
-                   "uk-icon-small correction icons", 'data-uk-tooltip': true, title: "Coming soon..."}), 
+                   "uk-icon-small correction icons", 'data-uk-tooltip': "{pos:'bottom'}", title: "Coming soon..."}), 
 
 
                            React.DOM.div({className: "text-logo"}, "Actor")

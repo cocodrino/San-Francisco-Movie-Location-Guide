@@ -10,12 +10,15 @@ var ActorCard = React.createClass({
      var url_img = "https://usercontent.googleapis.com/freebase/v1/image/en/"
         + Fm.toHtml( this.props.name )+ "?maxwidth=120&maxheight=120&mode=fillcropmid";
 
+     var _style={"width" : 120};
+     var _style2 = {textAlign: "center"};
+
     return(
-         <div className={"uk-width-1-"+(this.props.count)+"  uk-container-center"}>
-            <div>
-            <h3>{this.props.name}</h3>
+         <div style={_style2} className={"uk-width-1-"+(this.props.count) }>
+            <h3 >{this.props.name}</h3>
+            <div style={_style} className="uk-container-center">
             <img src={url_img}/>
-               </div>
+            </div>
          </div>
     )
   }

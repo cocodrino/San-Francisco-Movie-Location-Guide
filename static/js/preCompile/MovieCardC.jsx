@@ -58,7 +58,7 @@ var ValorationC = React.createClass({
       var originData = DATA_SPECIFIC[this.props.movie]["tomatodata"]["ratings"];
 
       function fixScores(value) {
-         if (value !== null || value !== -1) {
+         if (value !== null && Number(value) !== -1) {
             return value;
          } else {
             return "N/A";

@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa636d96-b057-4289-9d58-b2310e495e28" name="Default" comment="added readme">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/main.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/preCompile/ActorsCard.jsx" afterPath="$PROJECT_DIR$/static/js/preCompile/ActorsCard.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/preCompile/MapC.jsx" afterPath="$PROJECT_DIR$/static/js/preCompile/MapC.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/preCompile/MovieCardC.jsx" afterPath="$PROJECT_DIR$/static/js/preCompile/MovieCardC.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/preCompile/MovieListC.jsx" afterPath="$PROJECT_DIR$/static/js/preCompile/MovieListC.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/preCompile/PlacesCard.jsx" afterPath="$PROJECT_DIR$/static/js/preCompile/PlacesCard.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/preCompile/RouterC.jsx" afterPath="$PROJECT_DIR$/static/js/preCompile/RouterC.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/main.js" afterPath="$PROJECT_DIR$/static/js/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -78,7 +75,7 @@
       <file leaf-file-name="RouterC.jsx" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/preCompile/RouterC.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="31" selection-start="805" selection-end="805" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="2208">
+            <state line="66" column="31" selection-start="2416" selection-end="2416" vertical-scroll-proportion="0.0" vertical-offset="702" max-vertical-offset="2484">
               <folding />
             </state>
           </provider>
@@ -87,7 +84,7 @@
       <file leaf-file-name="MainContentC.jsx" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/preCompile/MainContentC.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="25" selection-start="215" selection-end="215" vertical-scroll-proportion="0.0" vertical-offset="112" max-vertical-offset="1296">
+            <state line="7" column="25" selection-start="215" selection-end="215" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="1458">
               <folding />
             </state>
           </provider>
@@ -96,7 +93,7 @@
       <file leaf-file-name="MapC.jsx" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/preCompile/MapC.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="14" selection-start="642" selection-end="642" vertical-scroll-proportion="0.0" vertical-offset="384" max-vertical-offset="2176">
+            <state line="24" column="14" selection-start="642" selection-end="642" vertical-scroll-proportion="0.0" vertical-offset="486" max-vertical-offset="2448">
               <folding />
             </state>
           </provider>
@@ -105,25 +102,34 @@
       <file leaf-file-name="MovieListC.jsx" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/preCompile/MovieListC.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="0" selection-start="2196" selection-end="2196" vertical-scroll-proportion="0.0" vertical-offset="999" max-vertical-offset="1920">
+            <state line="98" column="22" selection-start="3162" selection-end="3162" vertical-scroll-proportion="0.0" vertical-offset="1044" max-vertical-offset="2160">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlacesCard.jsx" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="PlacesCard.jsx" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/js/preCompile/PlacesCard.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="29" selection-start="371" selection-end="371" vertical-scroll-proportion="0.0" vertical-offset="912" max-vertical-offset="2864">
+            <state line="89" column="32" selection-start="2376" selection-end="2376" vertical-scroll-proportion="0.45390898" vertical-offset="1213" max-vertical-offset="3474">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ActorsCard.jsx" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="gulpfile.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gulpfile.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="46" selection-start="490" selection-end="490" vertical-scroll-proportion="0.0" vertical-offset="91" max-vertical-offset="828">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ActorsCard.jsx" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/preCompile/ActorsCard.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="61" selection-start="369" selection-end="369" vertical-scroll-proportion="0.2795699" vertical-offset="0" max-vertical-offset="1136">
+            <state line="12" column="48" selection-start="328" selection-end="328" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1332">
               <folding />
             </state>
           </provider>
@@ -132,7 +138,7 @@
       <file leaf-file-name="MovieCardC.jsx" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/preCompile/MovieCardC.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="103" column="21" selection-start="2984" selection-end="2984" vertical-scroll-proportion="0.0" vertical-offset="1042" max-vertical-offset="3760">
+            <state line="60" column="30" selection-start="1613" selection-end="1613" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4230">
               <folding />
             </state>
           </provider>
@@ -141,7 +147,7 @@
       <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="0" selection-start="733" selection-end="733" vertical-scroll-proportion="0.0" vertical-offset="384" max-vertical-offset="528">
+            <state line="24" column="0" selection-start="733" selection-end="733" vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="594">
               <folding />
             </state>
           </provider>
@@ -191,23 +197,23 @@
         <option value="$PROJECT_DIR$/static/js/preCompile/MainMovieDetailC.jsx" />
         <option value="$PROJECT_DIR$/static/js/preCompile/MainContentC.jsx" />
         <option value="$PROJECT_DIR$/static/test.html" />
-        <option value="$PROJECT_DIR$/static/js/preCompile/RouterC.jsx" />
         <option value="$PROJECT_DIR$/static/detail.html" />
         <option value="$PROJECT_DIR$/static/main.html" />
-        <option value="$PROJECT_DIR$/static/js/preCompile/PlacesCard.jsx" />
-        <option value="$PROJECT_DIR$/static/js/preCompile/MovieListC.jsx" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/static/js/preCompile/MapC.jsx" />
+        <option value="$PROJECT_DIR$/static/js/preCompile/MovieListC.jsx" />
         <option value="$PROJECT_DIR$/static/js/preCompile/MovieCardC.jsx" />
         <option value="$PROJECT_DIR$/static/js/preCompile/ActorsCard.jsx" />
+        <option value="$PROJECT_DIR$/static/js/preCompile/RouterC.jsx" />
+        <option value="$PROJECT_DIR$/static/js/preCompile/PlacesCard.jsx" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="151" />
-    <option name="y" value="43" />
-    <option name="width" value="1069" />
-    <option name="height" value="901" />
+    <option name="x" value="-1" />
+    <option name="y" value="24" />
+    <option name="width" value="1282" />
+    <option name="height" value="1001" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -236,7 +242,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -247,6 +252,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -430,7 +436,7 @@
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="ToolWindowManager">
-    <frame x="151" y="43" width="1069" height="901" extended-state="0" />
+    <frame x="-1" y="24" width="1282" height="1001" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2573696" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -443,7 +449,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22650057" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17466411" sideWeight="0.6643991" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17400645" sideWeight="0.6643991" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1967943" sideWeight="0.3344671" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19160998" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -614,11 +620,6 @@
         <state line="4" column="0" selection-start="209" selection-end="209" vertical-scroll-proportion="0.0952381" vertical-offset="0" max-vertical-offset="714" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="46" selection-start="490" selection-end="490" vertical-scroll-proportion="0.33226323" vertical-offset="31" max-vertical-offset="782" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/preCompile/Store.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="38" column="0" selection-start="0" selection-end="985" vertical-scroll-proportion="0.4607046" vertical-offset="306" max-vertical-offset="2635" />
@@ -706,13 +707,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/preCompile/RouterC.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="31" selection-start="805" selection-end="805" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="2208">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="0" selection-start="733" selection-end="733" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="561">
@@ -720,44 +714,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/preCompile/MapC.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="14" selection-start="642" selection-end="642" vertical-scroll-proportion="0.0" vertical-offset="384" max-vertical-offset="2176">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/preCompile/MovieListC.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="0" selection-start="2196" selection-end="2196" vertical-scroll-proportion="0.0" vertical-offset="999" max-vertical-offset="1920">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/hugedata.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="4" selection-start="4" selection-end="4" vertical-scroll-proportion="-3.1612904" vertical-offset="2352" max-vertical-offset="444464">
+        <state line="0" column="4" selection-start="4" selection-end="4" vertical-scroll-proportion="-3.1612904" vertical-offset="2352" max-vertical-offset="444464" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/preCompile/ActorsCard.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="48" selection-start="328" selection-end="328" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1332">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/preCompile/MovieCardC.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="21" selection-start="2984" selection-end="2984" vertical-scroll-proportion="0.0" vertical-offset="1042" max-vertical-offset="3760">
+        <state line="60" column="30" selection-start="1613" selection-end="1613" vertical-scroll-proportion="0.0" vertical-offset="864" max-vertical-offset="4230">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/preCompile/MovieListC.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="98" column="22" selection-start="3162" selection-end="3162" vertical-scroll-proportion="0.0" vertical-offset="1152" max-vertical-offset="2160">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="46" selection-start="490" selection-end="490" vertical-scroll-proportion="0.0" vertical-offset="91" max-vertical-offset="828">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/preCompile/RouterC.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="31" selection-start="2416" selection-end="2416" vertical-scroll-proportion="0.0" vertical-offset="702" max-vertical-offset="2484">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/preCompile/MapC.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="14" selection-start="642" selection-end="642" vertical-scroll-proportion="0.0" vertical-offset="486" max-vertical-offset="2448">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/preCompile/PlacesCard.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="29" selection-start="371" selection-end="371" vertical-scroll-proportion="0.0" vertical-offset="912" max-vertical-offset="2864">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/preCompile/ActorsCard.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="61" selection-start="369" selection-end="369" vertical-scroll-proportion="0.2795699" vertical-offset="0" max-vertical-offset="1136">
+        <state line="89" column="32" selection-start="2376" selection-end="2376" vertical-scroll-proportion="0.45390898" vertical-offset="1213" max-vertical-offset="3474">
           <folding />
         </state>
       </provider>

@@ -92,11 +92,11 @@ var MovieListC = React.createClass({
            <div className="uk-alert" data-uk-alert>
                 <a href="" className="uk-alert-close uk-close"></a>
                 <p>
-                Some poster couldn't be correctly loaded, seems a limitation with the github hosting...
-                please clone the project from &nbsp
+                "Some poster couldn't be correctly loaded, seems a limitation with the github hosting...
+                please clone the project from"
 
                 <a href="https://github.com/cocodrino/San-Francisco-Movie-Location-Guide/tree/gh-pages">
-                     here
+                     " here"
                </a>
 
                 </p>
