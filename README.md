@@ -17,6 +17,15 @@ and of course:
 
 for this amazing opportunity..many thanks!!!...
 
+IMPORTANT NOTE:
+- I didnt know than for this contest we could use tools like github,db's and storage...so I develop this project using only a small json and retrieving all the content dynamically from freebase,google maps etc..
+the data is automatically generated WITHOUT HUMAN INTERVENTION :D, so, in some cases could have mistakes (hope not so much).....
+
+
+
+
+the project needs some fixes and improvements and better documentation ...
+
 NOTE________________________________________________________
 
 OH GOD, the main.js file which is created after run browserify hadn't added to git
