@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa636d96-b057-4289-9d58-b2310e495e28" name="Default" comment="added readme">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/preCompile/ActorsCard.jsx" afterPath="$PROJECT_DIR$/static/js/preCompile/ActorsCard.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/preCompile/MovieCardC.jsx" afterPath="$PROJECT_DIR$/static/js/preCompile/MovieCardC.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/preCompile/MovieListC.jsx" afterPath="$PROJECT_DIR$/static/js/preCompile/MovieListC.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/preCompile/PlacesCard.jsx" afterPath="$PROJECT_DIR$/static/js/preCompile/PlacesCard.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/preCompile/RouterC.jsx" afterPath="$PROJECT_DIR$/static/js/preCompile/RouterC.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/main.js" afterPath="$PROJECT_DIR$/static/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SFmovieLocation.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -111,7 +106,7 @@
       <file leaf-file-name="PlacesCard.jsx" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/js/preCompile/PlacesCard.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="32" selection-start="2376" selection-end="2376" vertical-scroll-proportion="0.45390898" vertical-offset="1213" max-vertical-offset="3474">
+            <state line="108" column="105" selection-start="2861" selection-end="2861" vertical-scroll-proportion="0.4749125" vertical-offset="1537" max-vertical-offset="3474">
               <folding />
             </state>
           </provider>
@@ -436,7 +431,7 @@
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="ToolWindowManager">
-    <frame x="-1" y="24" width="1282" height="1001" extended-state="6" />
+    <frame x="-1" y="24" width="1282" height="1001" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2573696" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -763,7 +758,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/preCompile/PlacesCard.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="32" selection-start="2376" selection-end="2376" vertical-scroll-proportion="0.45390898" vertical-offset="1213" max-vertical-offset="3474">
+        <state line="108" column="105" selection-start="2861" selection-end="2861" vertical-scroll-proportion="0.4749125" vertical-offset="1537" max-vertical-offset="3474">
           <folding />
         </state>
       </provider>

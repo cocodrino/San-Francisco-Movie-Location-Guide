@@ -106,7 +106,7 @@ var PlaceCard = React.createClass({
 
       var locationFixed = (this.props.location.toLowerCase()).replace(/\([^\)]*\)/g, '');
 
-      $.getJSON("https://www.googleapis.com/freebase/v1/search?query=" + encodeURIComponent(locationFixed + " San Francisco"),
+      $.getJSON("https://www.googleapis.com/freebase/v1/search?query=" + encodeURIComponent(locationFixed),
          function (response) {
             var responseFB = response.result;
 
