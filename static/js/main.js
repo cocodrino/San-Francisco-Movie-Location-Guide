@@ -26931,14 +26931,21 @@ var MovieMainC = React.createClass({displayName: 'MovieMainC',
       var rating_distance = this.props.distance ?
          React.DOM.div(null, this.props.score)
          :
-         React.DOM.div(null, this.props.score, "/", this.props.distance);
+         React.DOM.div(null, React.DOM.p(null, this.props.score, " ", this.props.distance));
+
+      var _image = this.props.poster ? this.props.poster :""
+      var _posterName = _image.match(/[A-Za-z0-9@_.]+$/g)
+
+
+      var posterRoute = Array.isArray(_posterName) ? ("posters/" + _posterName[0]) : "posters/notFound2.png";
+
 
       return(
          React.DOM.li({id: Format.toHtml(this.props.name), className: "movieBar"}, 
             Link({to: "detail", params: {movie: this.props.name}}, 
                React.DOM.div({className: "uk-grid uk-panel-box data-uk-grid-match fixNew"}, 
                   React.DOM.div({className: "uk-width-large-1-10 uk-width-medium-2-10 uk-hidden-small poster"}, 
-                     React.DOM.img({src: this.props.poster})
+                     React.DOM.img({src: posterRoute})
                   ), 
 
                   React.DOM.div({className: 
@@ -26955,7 +26962,7 @@ var MovieMainC = React.createClass({displayName: 'MovieMainC',
                      "uk-width-medium-3-10 "
                   }, 
                      React.DOM.p(null, "Score"), 
-                     React.DOM.h4(null, rating_distance)
+                     React.DOM.p({className: "rating_dis"}, rating_distance)
                   )
 
 

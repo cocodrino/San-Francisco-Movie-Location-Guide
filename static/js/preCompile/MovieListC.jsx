@@ -18,14 +18,21 @@ var MovieMainC = React.createClass({
       var rating_distance = this.props.distance ?
          <div>{this.props.score}</div>
          :
-         <div>{this.props.score}/{this.props.distance}</div>;
+         <div><p>{this.props.score} {this.props.distance}</p></div>;
+
+      var _image = this.props.poster ? this.props.poster :""
+      var _posterName = _image.match(/[A-Za-z0-9@_.]+$/g)
+
+
+      var posterRoute = Array.isArray(_posterName) ? ("posters/" + _posterName[0]) : "posters/notFound2.png";
+
 
       return(
          <li id={Format.toHtml(this.props.name)} className="movieBar" >
             <Link to="detail" params={{movie: this.props.name}}>
                <div className="uk-grid uk-panel-box data-uk-grid-match fixNew">
                   <div className="uk-width-large-1-10 uk-width-medium-2-10 uk-hidden-small poster">
-                     <img src={this.props.poster}/>
+                     <img src={posterRoute}/>
                   </div>
 
                   <div className="
@@ -42,7 +49,7 @@ var MovieMainC = React.createClass({
                      uk-width-medium-3-10 "
                   >
                      <p>Score</p>
-                     <h4>{rating_distance}</h4>
+                     <p className="rating_dis">{rating_distance}</p>
                   </div>
 
 
