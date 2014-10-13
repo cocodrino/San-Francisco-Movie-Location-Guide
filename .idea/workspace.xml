@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fa636d96-b057-4289-9d58-b2310e495e28" name="Default" comment="added readme">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/preCompile/MovieListC.jsx" afterPath="$PROJECT_DIR$/static/js/preCompile/MovieListC.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/main.js" afterPath="$PROJECT_DIR$/static/js/main.js" />
     </list>
     <ignored path="SFmovieLocation.iws" />
@@ -98,7 +97,7 @@
       <file leaf-file-name="MovieListC.jsx" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/js/preCompile/MovieListC.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="55" selection-start="711" selection-end="711" vertical-scroll-proportion="0.45454547" vertical-offset="20" max-vertical-offset="2540">
+            <state line="20" column="34" selection-start="690" selection-end="690" vertical-scroll-proportion="0.45454547" vertical-offset="20" max-vertical-offset="2540">
               <folding />
             </state>
           </provider>
@@ -840,7 +839,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/preCompile/MovieListC.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="55" selection-start="711" selection-end="711" vertical-scroll-proportion="0.45454547" vertical-offset="20" max-vertical-offset="2540">
+        <state line="20" column="34" selection-start="690" selection-end="690" vertical-scroll-proportion="0.45454547" vertical-offset="20" max-vertical-offset="2540">
           <folding />
         </state>
       </provider>

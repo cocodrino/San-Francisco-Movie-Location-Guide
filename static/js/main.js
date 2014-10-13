@@ -26931,7 +26931,7 @@ var MovieMainC = React.createClass({displayName: 'MovieMainC',
       var rating_distance = this.props.distance ?
          React.DOM.div(null, this.props.score)
          :
-         React.DOM.div(null, this.props.score, " | ", this.props.distance);
+         React.DOM.div(null, this.props.score, " - ", this.props.distance);
 
       var _image = this.props.poster ? this.props.poster :""
       var _posterName = _image.match(/[A-Za-z0-9@_.]+$/g)
