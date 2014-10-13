@@ -18,7 +18,7 @@ var MovieMainC = React.createClass({
       var rating_distance = this.props.distance ?
          <div>{this.props.score}</div>
          :
-         <div><p>{this.props.score} {this.props.distance}</p></div>;
+         <div>{this.props.score} | {this.props.distance}</div>;
 
       var _image = this.props.poster ? this.props.poster :""
       var _posterName = _image.match(/[A-Za-z0-9@_.]+$/g)
@@ -49,7 +49,7 @@ var MovieMainC = React.createClass({
                      uk-width-medium-3-10 "
                   >
                      <p>Score</p>
-                     <p className="rating_dis">{rating_distance}</p>
+                     {rating_distance}
                   </div>
 
 
