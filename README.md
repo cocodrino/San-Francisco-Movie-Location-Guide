@@ -15,6 +15,7 @@ and of course:
 - Programmr http://www.programmr.com/
 - Hired https://hired.com/
 
+**THIS PROJECT SHOW WHAT MOVIES WERE FILMED NEAR YOU AND SHOW THE HISTORICAL AND TURISTICAL PLACES WITH SOME INTERESTING INFORMATION PROVIDED BY FREEBASE**
 
  
 http://cocodrino.github.io/San-Francisco-Movie-Location-Guide/
