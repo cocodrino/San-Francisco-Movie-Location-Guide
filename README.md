@@ -15,35 +15,9 @@ and of course:
 - Programmr http://www.programmr.com/
 - Hired https://hired.com/
 
-for this amazing opportunity..many thanks!!!...
-
-IMPORTANT NOTE:
-- I didnt know than for this contest we could use tools like github,db's and storage...so I develop this project using only a small json and retrieving all the content dynamically from freebase,google maps etc..
-the data is automatically generated WITHOUT HUMAN INTERVENTION :D, so, in some cases could have mistakes (hope not so much).....
-
-
-
-
-the project needs some fixes and improvements and better documentation ...
-
-NOTE________________________________________________________
-
-OH GOD, the main.js file which is created after run browserify hadn't added to git
-this file is only the product of run browserify, all the scripts exist since the first day, 
-hope there are not problems with it
-
-I notice this today because I was creating the static web page for demostration:
-it is available now
-
 
  
 http://cocodrino.github.io/San-Francisco-Movie-Location-Guide/
 
 
 the branch https://github.com/cocodrino/San-Francisco-Movie-Location-Guide/tree/gh-pages include the fixes
-
-
-sorry, hope it doesnt generate problems...
-the entry point is   static/main.html...
-
-thanks!
